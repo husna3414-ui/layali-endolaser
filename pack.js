@@ -9,7 +9,7 @@
    ============================================================ */
 const CLINIC_EMAIL = "info.lushlips@gmail.com";   // shown to clients; the script emails here
 const CLINIC_NAME  = "Layali Clinic";
-const SCRIPT_URL   = "https://script.google.com/macros/s/AKfycbyZmGl1u9miyYBzAjsnE7DUTBOX5omk9HsiBBArvzYldJbz5SKyCGEUF6iV98vFSmD6/exec";
+const SCRIPT_URL   = "https://script.google.com/macros/s/AKfycbwRlyOUuP_5c_LizHmCr-G7ksj-IzlWbWNIv4T1Hxg11V5M5g9eweI3FAPQM4eOl9fC/exec";
 /* ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
