@@ -149,17 +149,28 @@ document.addEventListener('DOMContentLoaded', () => {
       autoresponse: form.dataset.autoresponse || ''
     };
 
+    // Bulletproof delivery: a hidden form POST into a hidden iframe.
+    // Works on iOS/Safari (no CORS, no fetch/redirect issues). The script
+    // runs server-side; we don't need to read the response.
+    const deliver = () => new Promise((resolve) => {
+      const sink = document.createElement('iframe');
+      sink.name = 'layali_sink_' + Date.now();
+      sink.style.display = 'none';
+      document.body.appendChild(sink);
+      const f = document.createElement('form');
+      f.action = SCRIPT_URL; f.method = 'POST'; f.target = sink.name; f.style.display = 'none';
+      const ta = document.createElement('textarea'); ta.name = 'payload'; ta.value = JSON.stringify(payload);
+      f.appendChild(ta); document.body.appendChild(f);
+      let settled = false;
+      const finish = () => { if (settled) return; settled = true;
+        try { document.body.removeChild(f); document.body.removeChild(sink); } catch (e) {} resolve(); };
+      sink.addEventListener('load', finish);
+      setTimeout(finish, 4000); // fallback in case the cross-origin load event is suppressed
+      f.submit();
+    });
+
     try {
-      // text/plain + no-cors → Apps Script processes it server-side.
-      // redirect:'manual' stops the browser following Google's cross-origin
-      // redirect (which throws in Safari/iOS); the script has already run by then.
-      await fetch(SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        redirect: 'manual',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify(payload)
-      });
+      await deliver();
       form.style.display = 'none';
       const h = document.querySelector('header.hero'); if (h) h.style.display = 'none';
       if (doneScreen) doneScreen.style.display = 'block';
