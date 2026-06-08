@@ -30,24 +30,18 @@
   @media(min-width:620px){.carousel>.mini{flex:0 0 47%}}
   @media (prefers-reduced-motion:reduce){.reveal-on .card{opacity:1!important;transform:none!important}header.hero>*{animation:none!important}.result img{transition:none}}
 </style>
-<!-- ============================================================
-     META (FACEBOOK / INSTAGRAM) PIXEL — ad tracking & retargeting.
-     This lets you measure bookings from your ad and re-show it to
-     people who visited but didn't book (one of the biggest booking
-     drivers on Instagram ads).
-     TO ACTIVATE: 1) In Meta Events Manager, create a Pixel & copy its ID.
-                  2) Replace YOUR_PIXEL_ID below.  3) Remove the two comment
-                     lines (this one and the closing one) so the script runs.
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,
 'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','YOUR_PIXEL_ID');
+fbq('init','310080718260596');
 fbq('track','PageView');
 </script>
-     ============================================================ -->
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=310080718260596&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 </head><body>
 <div id="scrollbar"></div>
 <div class="wrap guide">
@@ -324,6 +318,17 @@ fbq('track','PageView');
       cards.forEach(function(c){io.observe(c);});
       setTimeout(function(){cards.forEach(function(c){c.classList.add('in');});},2600);
     } else { cards.forEach(function(c){c.classList.add('in');}); }
+  })();
+</script>
+<script>
+  /* Fire Meta conversion events on intent clicks */
+  (function(){
+    document.addEventListener('click',function(e){
+      var a=e.target.closest&&e.target.closest('a');if(!a||typeof fbq!=='function')return;
+      var h=a.getAttribute('href')||'';
+      if(h.indexOf('wa.me')>-1){ fbq('track','Lead',{content_name:'Endolaser WhatsApp enquiry'}); }
+      else if(h.indexOf('that-time.co.uk/service')>-1){ fbq('track','InitiateCheckout',{content_name:'Endolaser booking'}); }
+    },true);
   })();
 </script>
 </body></html>
