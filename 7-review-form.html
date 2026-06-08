@@ -1,60 +1,208 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Endolaser — How Are You Healing? | Layali Clinic</title>
+<title>How Are You Healing? | Layali Clinic</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<meta property="og:title" content="How Are You Healing? — Layali Clinic">
+<meta property="og:description" content="Your recovery check-in with Layali Clinic.">
+<meta property="og:image" content="https://husna3414-ui.github.io/layali-endolaser/logo.jpg">
+<meta property="og:url" content="https://husna3414-ui.github.io/layali-endolaser/7-review-form.html">
 </head><body>
 <div class="wrap">
   <header class="hero">
     <img class="logo" src="logo.jpg" alt="Layali Clinic">
-    <span class="kicker">Endolaser · Check-in</span>
+    <span class="kicker">Recovery Check-In</span>
     <h1>How Are You Healing?</h1>
-    <p class="sub">It's been a week or two since your treatment — we'd love a quick update to make sure you're recovering beautifully.</p>
+    <p class="sub">Thank you for taking a few moments to update us. We check in with all clients after treatment to make sure healing is progressing well — and to support you if needed.</p>
   </header>
 
-  <form data-pack-form="Endolaser Review" data-pdf-title="Endolaser Review Form" data-autoresponse="Thank you for your update — we're so glad to be looking after you. If you flagged a concern, we'll be in touch shortly. — Layali Clinic" novalidate>
-    <div class="card">
-      <div class="f"><label class="q">Your name <span class="req">*</span></label><input type="text" name="Name" required></div>
-      <div class="f"><label class="q">Email <span class="req">*</span><div class="hint">For your confirmation copy.</div></label><input type="email" name="Email" required></div>
-      <div class="f" data-group><label class="q">How is your healing going? <span class="req">*</span></label>
-        <div class="opts" data-min="1" data-radio>
-          <label class="opt"><input type="checkbox" name="Healing" value="Excellent"><span>Excellent — feeling great</span></label>
-          <label class="opt"><input type="checkbox" name="Healing" value="Good"><span>Good — settling nicely</span></label>
-          <label class="opt"><input type="checkbox" name="Healing" value="Concerned"><span>Concerned — I'd like advice</span></label>
-        </div><div class="err-msg">Please choose one.</div></div>
+  <form data-pack-form="Recovery Check-In" data-pdf-title="Recovery Check-In" data-autoresponse="Thank you for completing your recovery check-in with Layali Clinic. A member of our team will review your responses and photographs. If you're ever concerned about your recovery, please don't wait for your review — contact us on 07787 708200. — Layali Clinic" novalidate>
 
-      <div class="f" data-group><label class="q">Any side effects? <span class="req">*</span><div class="hint">Tick all that apply.</div></label>
-        <div class="opts grid-opts" data-min="1" data-none="None">
-          <label class="opt"><input type="checkbox" name="Side effects" value="None"><span>None</span></label>
-          <label class="opt"><input type="checkbox" name="Side effects" value="Bruising"><span>Bruising</span></label>
-          <label class="opt"><input type="checkbox" name="Side effects" value="Swelling"><span>Swelling</span></label>
-          <label class="opt"><input type="checkbox" name="Side effects" value="Pain"><span>Pain</span></label>
-          <label class="opt"><input type="checkbox" name="Side effects" value="Possible infection"><span>Possible infection</span></label>
-        </div><div class="err-msg">Please select at least one (or “None”).</div></div>
-
-      <div class="f" data-group><label class="q">How happy are you so far? <span class="req">*</span><div class="hint">1 = not happy · 10 = thrilled</div></label>
-        <div class="scale" data-min="1">
-          <label><input type="radio" name="Satisfaction (1-10)" value="1">1</label><label><input type="radio" name="Satisfaction (1-10)" value="2">2</label>
-          <label><input type="radio" name="Satisfaction (1-10)" value="3">3</label><label><input type="radio" name="Satisfaction (1-10)" value="4">4</label>
-          <label><input type="radio" name="Satisfaction (1-10)" value="5">5</label><label><input type="radio" name="Satisfaction (1-10)" value="6">6</label>
-          <label><input type="radio" name="Satisfaction (1-10)" value="7">7</label><label><input type="radio" name="Satisfaction (1-10)" value="8">8</label>
-          <label><input type="radio" name="Satisfaction (1-10)" value="9">9</label><label><input type="radio" name="Satisfaction (1-10)" value="10">10</label>
-        </div><div class="err-msg">Please choose a score.</div></div>
-
-      <div class="f"><label class="q">Anything you'd like to tell us?</label><textarea name="Comments"></textarea></div>
-      <div class="f"><label class="q">Upload a photo of the area (optional)<div class="hint">Helps us check your progress.</div></label><input type="file" name="attachment" accept="image/*,.heic"></div>
+    <div class="card prose">
+      <p class="lead">This form helps us monitor your recovery, identify any concerns early, track your results, and make sure you're happy with your treatment. Most clients heal beautifully — but we'd always rather hear from you than have you worry at home.</p>
     </div>
 
-    <button type="submit" class="submit">Send my update</button>
-    <p class="foot">Sent securely to Layali Clinic. If you're worried, please also call us on 07787 708200.</p>
+    <!-- PATIENT DETAILS -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">1</span><h2 class="sec-t">Your details</h2></div>
+      <div class="f"><label class="q">Full name <span class="req">*</span></label><input type="text" name="Full name" required></div>
+      <div class="row">
+        <div class="f"><label class="q">Email <span class="req">*</span><div class="hint">Your confirmation is sent here.</div></label><input type="email" name="Email" required></div>
+        <div class="f"><label class="q">Mobile number <span class="req">*</span></label><input type="tel" name="Mobile number" required></div>
+      </div>
+      <div class="f"><label class="q">Date of treatment <span class="req">*</span></label><input type="date" name="Date of treatment" required></div>
+      <div class="f" data-group><label class="q">Treatment received <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1">
+          <label class="opt"><input type="checkbox" name="Treatment received" value="Lip Filler"><span>Lip Filler</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment received" value="Cheek Filler"><span>Cheek Filler</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment received" value="Chin Filler"><span>Chin Filler</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment received" value="Jawline Filler"><span>Jawline Filler</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment received" value="Endolaser"><span>Endolaser</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment received" value="PDO Threads"><span>PDO Threads</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment received" value="Skin Booster"><span>Skin Booster</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment received" value="Anti-Wrinkle Treatment"><span>Anti-Wrinkle Treatment</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment received" value="Other"><span>Other</span></label>
+        </div><div class="err-msg">Please select your treatment.</div></div>
+    </div>
+
+    <!-- OVERALL RECOVERY -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">2</span><h2 class="sec-t">Overall recovery</h2></div>
+      <div class="f" data-group><label class="q">How would you describe your recovery so far? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single>
+          <label class="opt"><input type="checkbox" name="Recovery so far" value="Excellent — feeling great"><span>Excellent — feeling great</span></label>
+          <label class="opt"><input type="checkbox" name="Recovery so far" value="Good — settling nicely"><span>Good — settling nicely</span></label>
+          <label class="opt"><input type="checkbox" name="Recovery so far" value="Fair — some concerns"><span>Fair — some concerns</span></label>
+          <label class="opt"><input type="checkbox" name="Recovery so far" value="Concerned — I would like advice"><span>Concerned — I would like advice</span></label>
+          <label class="opt"><input type="checkbox" name="Recovery so far" value="Urgent — please contact me"><span>Urgent — please contact me</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f" data-group><label class="q">Compared to the first few days after treatment, are your symptoms:</label>
+        <div class="opts" data-single>
+          <label class="opt"><input type="checkbox" name="Symptoms vs first days" value="Much better"><span>Much better</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms vs first days" value="Slightly better"><span>Slightly better</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms vs first days" value="About the same"><span>About the same</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms vs first days" value="Worse"><span>Worse</span></label>
+        </div></div>
+    </div>
+
+    <!-- HEALING ASSESSMENT -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">3</span><h2 class="sec-t">Healing assessment</h2></div>
+      <div class="f" data-group><label class="q">Have you experienced any of the following?<div class="hint">Tick all that apply.</div></label>
+        <div class="opts grid-opts" data-none="None">
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="None"><span>None</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Swelling"><span>Swelling</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Bruising"><span>Bruising</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Tenderness"><span>Tenderness</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Tightness"><span>Tightness</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Dryness"><span>Dryness</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Itching"><span>Itching</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Small lumps"><span>Small lumps</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Firmness"><span>Firmness</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Unevenness"><span>Unevenness</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Mild numbness"><span>Mild numbness</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Cold sore"><span>Cold sore</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Redness"><span>Redness</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Discharge"><span>Discharge</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Fever"><span>Fever</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms experienced" value="Other"><span>Other</span></label>
+        </div></div>
+      <div class="f" data-group><label class="q">Are your symptoms:</label>
+        <div class="opts" data-single>
+          <label class="opt"><input type="checkbox" name="Symptoms trend" value="Improving"><span>Improving</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms trend" value="Staying the same"><span>Staying the same</span></label>
+          <label class="opt"><input type="checkbox" name="Symptoms trend" value="Getting worse"><span>Getting worse</span></label>
+        </div></div>
+      <div class="f" data-group><label class="q">Are you concerned about any of the following?<div class="hint">Tick all that apply.</div></label>
+        <div class="opts grid-opts" data-none="No concerns">
+          <label class="opt"><input type="checkbox" name="Concerns" value="Swelling"><span>Swelling</span></label>
+          <label class="opt"><input type="checkbox" name="Concerns" value="Bruising"><span>Bruising</span></label>
+          <label class="opt"><input type="checkbox" name="Concerns" value="Lumps"><span>Lumps</span></label>
+          <label class="opt"><input type="checkbox" name="Concerns" value="Asymmetry"><span>Asymmetry</span></label>
+          <label class="opt"><input type="checkbox" name="Concerns" value="Pain"><span>Pain</span></label>
+          <label class="opt"><input type="checkbox" name="Concerns" value="Healing speed"><span>Healing speed</span></label>
+          <label class="opt"><input type="checkbox" name="Concerns" value="Infection"><span>Infection</span></label>
+          <label class="opt"><input type="checkbox" name="Concerns" value="Final result"><span>Final result</span></label>
+          <label class="opt"><input type="checkbox" name="Concerns" value="Other"><span>Other</span></label>
+          <label class="opt"><input type="checkbox" name="Concerns" value="No concerns"><span>No concerns</span></label>
+        </div></div>
+      <div class="f"><label class="q">Please tell us about any concerns</label><textarea name="Concern details"></textarea></div>
+    </div>
+
+    <!-- SATISFACTION -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">4</span><h2 class="sec-t">Satisfaction</h2></div>
+      <div class="f" data-group><label class="q">How happy are you with your treatment so far? <span class="req">*</span><div class="hint">1 = not happy · 10 = absolutely thrilled</div></label>
+        <div class="scale" data-min="1">
+          <label><input type="radio" name="Satisfaction (1-10)" value="1"><span>1</span></label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="2"><span>2</span></label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="3"><span>3</span></label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="4"><span>4</span></label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="5"><span>5</span></label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="6"><span>6</span></label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="7"><span>7</span></label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="8"><span>8</span></label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="9"><span>9</span></label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="10"><span>10</span></label>
+        </div><div class="err-msg">Please choose a score.</div></div>
+      <div class="f" data-group><label class="q">Have you noticed an improvement since treatment?</label>
+        <div class="opts" data-single>
+          <label class="opt"><input type="checkbox" name="Improvement noticed" value="Significant improvement"><span>Significant improvement</span></label>
+          <label class="opt"><input type="checkbox" name="Improvement noticed" value="Moderate improvement"><span>Moderate improvement</span></label>
+          <label class="opt"><input type="checkbox" name="Improvement noticed" value="Slight improvement"><span>Slight improvement</span></label>
+          <label class="opt"><input type="checkbox" name="Improvement noticed" value="No noticeable improvement yet"><span>No noticeable improvement yet</span></label>
+        </div></div>
+      <div class="f" data-group><label class="q">Do you feel the result is:</label>
+        <div class="opts" data-single>
+          <label class="opt"><input type="checkbox" name="Result feels" value="Better than expected"><span>Better than expected</span></label>
+          <label class="opt"><input type="checkbox" name="Result feels" value="As expected"><span>As expected</span></label>
+          <label class="opt"><input type="checkbox" name="Result feels" value="Not yet where I hoped"><span>Not yet where I hoped</span></label>
+          <label class="opt"><input type="checkbox" name="Result feels" value="Too early to tell"><span>Too early to tell</span></label>
+        </div></div>
+    </div>
+
+    <!-- PHOTOS -->
+    <div class="card prose">
+      <div class="sec-h"><span class="sec-n">5</span><h2 class="sec-t">Progress photographs</h2></div>
+      <p>Photographs help us compare healing, monitor swelling, track results and give you advice. Please send <b>front, left side and right side</b> photos of your treatment area.</p>
+      <div class="notice">The easiest way is to send them straight to us on WhatsApp — tap below, then attach your photos to the chat.</div>
+      <div style="text-align:center;margin-top:14px"><a class="btn-gold" href="https://wa.me/447787708200?text=Hi%20Layali%20Clinic%2C%20here%20are%20my%20recovery%20photos">Send my photos on WhatsApp &rsaquo;</a></div>
+    </div>
+
+    <!-- AFTERCARE COMPLIANCE -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">6</span><h2 class="sec-t">Aftercare</h2></div>
+      <div class="f" data-group><label class="q">Have you followed the aftercare advice provided? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single>
+          <label class="opt"><input type="checkbox" name="Followed aftercare" value="Yes"><span>Yes</span></label>
+          <label class="opt"><input type="checkbox" name="Followed aftercare" value="Mostly"><span>Mostly</span></label>
+          <label class="opt"><input type="checkbox" name="Followed aftercare" value="Partially"><span>Partially</span></label>
+          <label class="opt"><input type="checkbox" name="Followed aftercare" value="No"><span>No</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Have you experienced any issues following the aftercare advice?</label><textarea name="Aftercare issues"></textarea></div>
+    </div>
+
+    <!-- FUTURE TREATMENTS -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">7</span><h2 class="sec-t">Future treatment interest</h2></div>
+      <div class="f" data-group><label class="q">Would you like information about any other treatments?</label>
+        <div class="opts grid-opts" data-none="No thank you">
+          <label class="opt"><input type="checkbox" name="Interested in" value="Lip Filler"><span>Lip Filler</span></label>
+          <label class="opt"><input type="checkbox" name="Interested in" value="Cheek Filler"><span>Cheek Filler</span></label>
+          <label class="opt"><input type="checkbox" name="Interested in" value="Chin Filler"><span>Chin Filler</span></label>
+          <label class="opt"><input type="checkbox" name="Interested in" value="Jawline Filler"><span>Jawline Filler</span></label>
+          <label class="opt"><input type="checkbox" name="Interested in" value="Skin Boosters"><span>Skin Boosters</span></label>
+          <label class="opt"><input type="checkbox" name="Interested in" value="Polynucleotides"><span>Polynucleotides</span></label>
+          <label class="opt"><input type="checkbox" name="Interested in" value="Endolaser"><span>Endolaser</span></label>
+          <label class="opt"><input type="checkbox" name="Interested in" value="PDO Threads"><span>PDO Threads</span></label>
+          <label class="opt"><input type="checkbox" name="Interested in" value="Anti-Wrinkle Treatment"><span>Anti-Wrinkle Treatment</span></label>
+          <label class="opt"><input type="checkbox" name="Interested in" value="No thank you"><span>No thank you</span></label>
+        </div></div>
+    </div>
+
+    <!-- TESTIMONIAL + FINAL -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">8</span><h2 class="sec-t">Testimonial &amp; final comments</h2></div>
+      <div class="f" data-group><label class="q">Are you happy for us to contact you about a review or testimonial if your results continue to progress well?</label>
+        <div class="opts" data-single>
+          <label class="opt"><input type="checkbox" name="Testimonial contact" value="Yes"><span>Yes</span></label>
+          <label class="opt"><input type="checkbox" name="Testimonial contact" value="No"><span>No</span></label>
+        </div></div>
+      <div class="f"><label class="q">Is there anything else you would like us to know?</label><textarea name="Final comments"></textarea></div>
+    </div>
+
+    <button type="submit" class="submit">Send my check-in</button>
+    <p class="foot">Reviewed by the Layali Clinic team. · <a href="privacy.html">Privacy Notice</a></p>
   </form>
 
   <div class="done" id="doneScreen"><div class="tick">&check;</div><h2>Thank you</h2>
-    <p>We've got your update. If you flagged a concern, we'll be in touch — and you can always call us on 07787 708200.</p></div>
-  <p class="foot">Layali Clinic · 442 Lea Bridge Road, Leyton, E10 7DT · 07787 708200 · <a href="privacy.html">Privacy Notice</a></p>
+    <p>Thank you for choosing Layali Clinic. A member of our team will review your information and photographs. If we identify anything that requires urgent attention, we'll contact you as soon as possible.</p>
+    <p>If you're ever concerned about your recovery, please don't wait for a review appointment — contact us immediately on <b>07787&nbsp;708200</b>.</p>
+    <div style="margin-top:14px"><a class="btn-gold" href="https://wa.me/447787708200">Message us on WhatsApp &rsaquo;</a></div></div>
+  <p class="foot">Layali Clinic · 442 Lea Bridge Road, Leyton, London, E10 7DT · 07787 708200 · info.lushlips@gmail.com · <a href="privacy.html">Privacy Notice</a></p>
 </div>
 <script src="pack.js?v=fullpdf"></script>
 </body></html>
