@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Endolaser — Consent Form | Layali Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head><body>
+<div class="wrap">
+  <header class="hero">
+    <img class="logo" src="logo.jpg" alt="Layali Clinic">
+    <span class="kicker">Endolaser · Informed Consent</span>
+    <h1>Endolaser Consent Form</h1>
+    <p class="sub">Treatment: Endolaser / Skin Tightening / Fat Reduction. Please read every section carefully. Your signature confirms you understand and agree.</p>
+  </header>
+
+  <form data-pack-form="Endolaser Consent" data-pdf-title="Endolaser Consent Form" data-autoresponse="Thank you for completing your Endolaser consent form with Layali Clinic. We've received it and saved it to your record. If anything about your health changes before your appointment, please call us on 07787 708200. — Layali Clinic" novalidate>
+
+    <!-- PATIENT DETAILS -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">1</span><h2 class="sec-t">Patient details</h2></div>
+      <div class="row">
+        <div class="f"><label class="q">First name <span class="req">*</span></label><input type="text" name="First name" required></div>
+        <div class="f"><label class="q">Last name <span class="req">*</span></label><input type="text" name="Last name" required></div>
+      </div>
+      <div class="row">
+        <div class="f"><label class="q">Date of birth <span class="req">*</span></label><input type="date" name="Date of birth" required></div>
+        <div class="f"><label class="q">Email <span class="req">*</span><div class="hint">Your confirmation copy is sent here.</div></label><input type="email" name="Email" required></div>
+      </div>
+      <div class="f"><label class="q">Phone number <span class="req">*</span></label><input type="tel" name="Phone number" required></div>
+      <div class="f"><label class="q">Address <span class="req">*</span></label>
+        <input type="text" name="Street address" placeholder="Street address" required style="margin-bottom:10px">
+        <input type="text" name="Street address line 2" placeholder="Street address line 2 (optional)" style="margin-bottom:10px">
+        <div class="row" style="margin-bottom:10px"><input type="text" name="City" placeholder="City" required><input type="text" name="County" placeholder="County"></div>
+        <input type="text" name="Postcode" placeholder="Postcode" required></div>
+    </div>
+
+    <!-- INFORMED CONSENT -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">2</span><h2 class="sec-t">Informed consent</h2></div>
+      <div class="notice">
+        This informed consent ensures you have comprehensive written information regarding the risks, benefits, alternatives, expected outcomes, recovery and possible complications associated with Endolaser treatment. It supplements your discussion with your practitioner.
+        <div style="margin-top:8px">Please read and understand everything in this form. If you have any questions, concerns or uncertainties about the procedure, results, side effects, contraindications, aftercare or risks, you must discuss them with your practitioner <b>before signing</b>.</div>
+        <div style="margin-top:8px">By signing, you confirm you understand the nature of the procedure, the potential risks and complications, the alternatives available, and that <b>results cannot be guaranteed</b>.</div>
+      </div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Informed consent acknowledgement" value="I have read and understood this informed consent information."><span>I have read and understood this information.</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+    </div>
+
+    <!-- MEDICAL HISTORY -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">3</span><h2 class="sec-t">Medical history</h2></div>
+      <div class="f" data-group><label class="q">Do you have any of the following medical conditions? <span class="req">*</span><div class="hint">Tick all that apply.</div></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Heart disease"><span>Heart disease</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="High blood pressure"><span>High blood pressure</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Low blood pressure"><span>Low blood pressure</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Diabetes"><span>Diabetes</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Epilepsy or seizures"><span>Epilepsy or seizures</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Blood clotting disorder"><span>Blood clotting disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Bleeding disorder"><span>Bleeding disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="History of excessive bruising"><span>History of excessive bruising</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Autoimmune disease"><span>Autoimmune disease</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Rheumatoid arthritis"><span>Rheumatoid arthritis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Lupus"><span>Lupus</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Thyroid disorder"><span>Thyroid disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Multiple sclerosis"><span>Multiple sclerosis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Psoriasis"><span>Psoriasis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Eczema"><span>Eczema</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Active acne in the treatment area"><span>Active acne in treatment area</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Rosacea"><span>Rosacea</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Skin infection"><span>Skin infection</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Herpes simplex / cold sores"><span>Herpes simplex / cold sores</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Keloid scarring"><span>Keloid scarring</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Hypertrophic scarring"><span>Hypertrophic scarring</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Poor wound healing"><span>Poor wound healing</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Cancer or history of cancer"><span>Cancer or history of cancer</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous radiotherapy"><span>Previous radiotherapy</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous chemotherapy"><span>Previous chemotherapy</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Liver disease"><span>Liver disease</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Kidney disease"><span>Kidney disease</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Immune system disorder"><span>Immune system disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="HIV / Hepatitis"><span>HIV / Hepatitis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Fainting episodes"><span>Fainting episodes</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Anxiety around procedures"><span>Anxiety around procedures</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection (choose “None of the above” if none apply).</div></div>
+      <div class="f"><label class="q">Further details (if required)</label><textarea name="Medical history details"></textarea></div>
+    </div>
+
+    <!-- MEDICATION -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">4</span><h2 class="sec-t">Medication</h2></div>
+      <div class="f" data-group><label class="q">Are you currently taking any medication? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-radio>
+          <label class="opt"><input type="checkbox" name="Taking medication" value="Yes"><span>Yes</span></label>
+          <label class="opt"><input type="checkbox" name="Taking medication" value="No"><span>No</span></label>
+        </div><div class="err-msg">Please choose one.</div></div>
+      <div class="f"><label class="q">If yes, please list all medication<div class="hint">Including prescription, over-the-counter, herbal supplements and vitamins.</div></label><textarea name="Medication list"></textarea></div>
+
+      <div class="f" data-group><label class="q">Do you take any of the following? <span class="req">*</span><div class="hint">Tick all that apply.</div></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Aspirin"><span>Aspirin</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Warfarin"><span>Warfarin</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Apixaban"><span>Apixaban</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Rivaroxaban"><span>Rivaroxaban</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Clopidogrel"><span>Clopidogrel</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Heparin"><span>Heparin</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Blood thinning medication"><span>Blood thinning medication</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Steroids"><span>Steroids</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Roaccutane / Isotretinoin"><span>Roaccutane / Isotretinoin</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Antibiotics"><span>Antibiotics</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Anti-inflammatory medication"><span>Anti-inflammatory medication</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Ibuprofen"><span>Ibuprofen</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Naproxen"><span>Naproxen</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Fish oil"><span>Fish oil</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Vitamin E"><span>Vitamin E</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Herbal supplements"><span>Herbal supplements</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="Weight loss injections"><span>Weight loss injections</span></label>
+          <label class="opt"><input type="checkbox" name="Specific medication" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+    </div>
+
+    <!-- ALLERGIES -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">5</span><h2 class="sec-t">Allergies</h2></div>
+      <div class="f" data-group><label class="q">Have you ever had an allergic reaction to any of the following? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <label class="opt"><input type="checkbox" name="Allergies" value="Local anaesthetic"><span>Local anaesthetic</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Lidocaine"><span>Lidocaine</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Adrenaline / epinephrine"><span>Adrenaline / epinephrine</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Plasters"><span>Plasters</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Dressings"><span>Dressings</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Chlorhexidine"><span>Chlorhexidine</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Iodine"><span>Iodine</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Latex"><span>Latex</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Antibiotics"><span>Antibiotics</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Painkillers"><span>Painkillers</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Laser treatment"><span>Laser treatment</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Skincare products"><span>Skincare products</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">If yes, please provide details</label><textarea name="Allergy details"></textarea></div>
+    </div>
+
+    <!-- PREGNANCY -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">6</span><h2 class="sec-t">Pregnancy, breastfeeding &amp; health</h2></div>
+      <div class="sec-d">Please tick to confirm. If any do not apply to you, tell your practitioner.</div>
+      <div class="f" data-group><div class="opts">
+        <label class="opt"><input type="checkbox" name="Pregnancy declaration" value="I am not pregnant"><span>I am not pregnant</span></label>
+        <label class="opt"><input type="checkbox" name="Pregnancy declaration" value="I am not breastfeeding"><span>I am not breastfeeding</span></label>
+        <label class="opt"><input type="checkbox" name="Pregnancy declaration" value="I am not trying to conceive"><span>I am not trying to conceive</span></label>
+        <label class="opt"><input type="checkbox" name="Pregnancy declaration" value="I am not undergoing IVF or fertility treatment"><span>I am not undergoing IVF or fertility treatment</span></label>
+        <label class="opt"><input type="checkbox" name="Pregnancy declaration" value="I understand Endolaser is not recommended during pregnancy or breastfeeding"><span>I understand Endolaser is not recommended during pregnancy or breastfeeding</span></label>
+      </div></div>
+      <div class="f"><label class="q">Further information (if applicable)</label><textarea name="Pregnancy details"></textarea></div>
+    </div>
+
+    <!-- PREVIOUS TREATMENTS -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">7</span><h2 class="sec-t">Previous treatments</h2></div>
+      <div class="f" data-group><label class="q">Have you had any of the following in or near the area being treated? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1" data-none="None">
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Dermal filler"><span>Dermal filler</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Botulinum toxin"><span>Botulinum toxin</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="PDO / COG threads"><span>PDO / COG threads</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="HIFU"><span>HIFU</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="RF microneedling"><span>RF microneedling</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Laser treatment"><span>Laser treatment</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Fat dissolving injections"><span>Fat dissolving injections</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Liposuction"><span>Liposuction</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Facelift"><span>Facelift</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Neck lift"><span>Neck lift</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Blepharoplasty"><span>Blepharoplasty</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Scar revision"><span>Scar revision</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Skin peels"><span>Skin peels</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Microneedling"><span>Microneedling</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Surgery"><span>Surgery</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Other"><span>Other</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="None"><span>None</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Please provide dates and details</label><textarea name="Previous treatment details"></textarea></div>
+    </div>
+
+    <!-- WHAT IS ENDOLASER / PROCEDURE -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">8</span><h2 class="sec-t">About the procedure</h2></div>
+      <div class="faq">
+        <details><summary>What is Endolaser?</summary><p>Endolaser is a minimally invasive laser treatment used to tighten skin, stimulate collagen, improve skin laxity, contour the face or body, and reduce small areas of localised fat. A very fine sterile laser fibre is inserted under the skin through a small entry point, and laser energy is delivered beneath the skin to create controlled heating. This may contract existing collagen, stimulate new collagen, improve firmness and texture, tighten loose skin, improve jawline and neck definition, reduce jowls and double-chin fullness, and reduce small localised fat deposits. Endolaser is <b>not</b> surgery and does not produce the same result as a surgical facelift, neck lift or liposuction.</p></details>
+        <details><summary>The procedure &amp; sensations</summary><p>The area is assessed, marked and cleansed. A local anaesthetic may be used. A small entry point is created and a fine sterile fibre inserted; laser energy is delivered to create controlled heating as the fibre is moved through the area. You may feel warmth, pressure, mild pulling, mild discomfort, tightness and a strange but tolerable sensation under the skin. Afterwards the area may feel swollen, tender, tight or bruised, and entry points may be covered with a small dressing. Procedure time varies by area.</p></details>
+      </div>
+    </div>
+
+    <!-- TREATMENT AREAS -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">9</span><h2 class="sec-t">Treatment area(s)</h2></div>
+      <div class="f" data-group><label class="q">Which area(s) are being treated? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1">
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Double chin"><span>Double chin</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Jawline"><span>Jawline</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Jowls"><span>Jowls</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Lower face"><span>Lower face</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Mid-face"><span>Mid-face</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Neck"><span>Neck</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Full face and neck"><span>Full face and neck</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Abdomen"><span>Abdomen</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Arms"><span>Arms</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Inner thighs"><span>Inner thighs</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Knees"><span>Knees</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Hips"><span>Hips</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Flanks / love handles"><span>Flanks / love handles</span></label>
+          <label class="opt"><input type="checkbox" name="Treatment areas" value="Other"><span>Other</span></label>
+        </div><div class="err-msg">Please select at least one area.</div></div>
+      <div class="f"><label class="q">Other area (if applicable)</label><input type="text" name="Other treatment area"></div>
+    </div>
+
+    <!-- ANAESTHETIC -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">10</span><h2 class="sec-t">Anaesthetic</h2></div>
+      <div class="notice">Local anaesthetic may be used. It carries its own potential risks including (but not limited to): stinging or burning during administration, temporary numbness, bruising, swelling, dizziness, faintness, allergic reaction, and temporary palpitations if adrenaline-containing anaesthetic is used.</div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Anaesthetic acknowledgement" value="I understand the anaesthetic risks and have informed my practitioner of any known allergies or previous reactions."><span>I understand the anaesthetic risks and have informed my practitioner of any allergies or previous reactions.</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+    </div>
+
+    <!-- BENEFITS / RESULTS / ALTERNATIVES -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">11</span><h2 class="sec-t">Benefits, results &amp; alternatives</h2></div>
+      <div class="faq">
+        <details><summary>Potential benefits</summary><p>Skin tightening, improved facial contour and jawline definition, reduction in jowls, improved neck firmness, reduced double-chin fullness, improved skin quality, collagen stimulation, reduction of small localised fat deposits, improved confidence, and minimal downtime compared with surgery. Results vary between individuals and <b>cannot be guaranteed</b>.</p></details>
+        <details><summary>Results &amp; follow-up</summary><p>Results develop gradually. Some tightening may be visible soon after treatment but can be affected by swelling — the final result is not immediate. Swelling may temporarily hide or exaggerate the result. Results usually develop over several weeks to months; collagen production may continue for 3–6 months and some clients improve for up to 12 months. One session may not achieve your desired result and additional or maintenance treatment may be recommended. Ageing continues naturally, and lifestyle factors (smoking, alcohol, diet, hydration, weight changes, sun exposure) may affect the result.</p></details>
+        <details><summary>Alternative treatments</summary><p>Alternatives may include: no treatment, surgical facelift, surgical neck lift, liposuction, radiofrequency skin tightening, HIFU, RF microneedling, thread lift, dermal fillers, fat dissolving injections, skin boosters, weight loss, or other practitioner-recommended treatments. You have the right to decline treatment or choose an alternative.</p></details>
+      </div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Results acknowledgement" value="I understand the benefits, that results vary and are not guaranteed, that further treatment may be needed, and that alternatives (including no treatment) have been explained."><span>I understand the benefits, that results vary and are not guaranteed, that further treatment may be needed, and the alternatives (including no treatment).</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+    </div>
+
+    <!-- RISKS -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">12</span><h2 class="sec-t">Risks &amp; complications</h2></div>
+      <div class="notice">No procedure is entirely risk-free. Endolaser is minimally invasive and involves inserting a laser fibre beneath the skin, so there are inherent and potential risks. Unforeseen risks not listed here may also occur. Some complications may require medication, medical review, referral, further treatment, corrective procedures or hospital care.</div>
+      <div class="cols">
+        <div class="mini ok"><h4>Common (usually temporary)</h4><ul>
+          <li>Swelling, bruising, redness</li><li>Tenderness, tightness, mild discomfort</li><li>Warmth in the area</li><li>Small entry-point marks &amp; minor bleeding</li><li>Temporary unevenness or asymmetry</li><li>Temporary firmness / mild lumps</li><li>Skin sensitivity, temporary numbness</li><li>Feeling faint</li></ul></div>
+        <div class="mini avoid"><h4>Uncommon</h4><ul>
+          <li>Prolonged swelling / bruising / tenderness</li><li>Persistent firmness, fibrosis, nodules</li><li>Irregular contour, dents, uneven fat reduction</li><li>Delayed healing, infection</li><li>Pigmentation changes (hyper/hypo)</li><li>Prolonged numbness, nerve irritation</li><li>Unsatisfactory outcome / further treatment</li></ul></div>
+      </div>
+      <div class="mini avoid"><h4>Rare but serious</h4><ul>
+        <li>Burns, thermal injury, blistering, skin necrosis</li><li>Permanent scarring / keloid / pigmentation change</li><li>Permanent numbness, altered sensation, nerve damage</li><li>Temporary or permanent weakness, chronic pain</li><li>Fat necrosis, infection requiring antibiotics, abscess</li><li>Damage to underlying structures, significant asymmetry</li><li>Permanent contour irregularity, need for surgical correction, hospital treatment</li></ul></div>
+
+      <div class="faq" style="margin-top:8px">
+        <details><summary>Damage to underlying structures</summary><p>Endolaser is performed beneath the skin; although care is taken, there is a risk of trauma or irritation to underlying structures including blood vessels, nerves, lymphatic vessels, fat, connective tissue, salivary glands (in facial areas), muscle or fascia and other soft tissue. In rare cases injury may cause persistent problems with appearance, sensation or function.</p></details>
+        <details><summary>Infection</summary><p>Any procedure involving entry through the skin carries an infection risk. Signs include increasing redness, increasing swelling, heat, worsening pain, pus or discharge, fever, feeling unwell, or red streaking. If you experience any of these you must contact Layali Clinic immediately and may need antibiotics or medical review.</p></details>
+        <details><summary>Burns &amp; thermal injury</summary><p>Endolaser works by delivering heat beneath the skin. Despite careful technique, excessive heat may cause burns, blistering, skin damage, necrosis, pigmentation change, scarring or delayed healing. These may require medical treatment and may leave permanent marks.</p></details>
+        <details><summary>Numbness, nerve irritation &amp; altered sensation</summary><p>Temporary numbness, tingling or altered sensation can occur from swelling, inflammation or irritation of small sensory nerves, and usually improves with time. Rarely, numbness, altered sensation, hypersensitivity, weakness or nerve symptoms may be prolonged or permanent.</p></details>
+        <details><summary>Fibrosis, lumps &amp; unevenness</summary><p>During healing you may feel firm areas, lumps, nodules, rope-like firmness, uneven texture or tight bands, caused by swelling, inflammation, collagen remodelling, fibrosis or healing. Most mild irregularities improve over time; some may persist and require massage, review, further or corrective treatment. Do not aggressively massage unless advised.</p></details>
+        <details><summary>Fat reduction &amp; contour irregularity</summary><p>Where used for fat reduction, the reduction may be uneven. Risks include uneven fat reduction, indentations, depressions, asymmetry, over-reduction, under-correction, irregular contour, remaining loose skin and need for additional treatment. Endolaser is <b>not</b> a weight-loss treatment.</p></details>
+        <details><summary>Scarring</summary><p>Although entry points are small, any break in the skin may scar. Risk is increased by a history of keloid/hypertrophic scars, poor wound healing, infection, picking/scratching, poor aftercare, or smoking/vaping. Scars may be temporary or permanent.</p></details>
+        <details><summary>Pigmentation changes</summary><p>Pigmentation changes may occur — darkening, lightening, post-inflammatory pigmentation or persistent discolouration — with risk increased by sun exposure, sunbeds, darker skin types, inflammation, burns or poor aftercare. Protect the area from sun and use SPF as advised.</p></details>
+        <details><summary>Asymmetry &amp; dissatisfaction</summary><p>The face and body are naturally asymmetrical; Endolaser may improve but not fully correct asymmetry, and swelling can temporarily worsen it. Dissatisfaction is possible (not enough tightening/fat reduction, uneven result, result not matching expectation, need for further treatment). No guarantee has been made regarding the final result.</p></details>
+      </div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Risks acknowledgement" value="I have read, understood and accept all the risks and complications listed above, including common, uncommon and rare but serious complications, and that there are no guarantees regarding the outcome."><span>I have read, understood and <b>accept all the risks and complications</b> listed above, and understand there are no guarantees regarding the outcome.</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+    </div>
+
+    <!-- CONTRAINDICATIONS -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">13</span><h2 class="sec-t">Contraindications</h2></div>
+      <div class="f" data-group><label class="q">Do you have any of the following contraindications? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Pregnancy"><span>Pregnancy</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Breastfeeding"><span>Breastfeeding</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Active infection"><span>Active infection</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Active skin condition in treatment area"><span>Active skin condition in area</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Open wound"><span>Open wound</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Recent surgery"><span>Recent surgery</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Recent filler in treatment area"><span>Recent filler in area</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Recent threads in treatment area"><span>Recent threads in area</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Blood thinning medication"><span>Blood thinning medication</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Uncontrolled diabetes"><span>Uncontrolled diabetes</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Keloid scarring"><span>Keloid scarring</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Poor wound healing"><span>Poor wound healing</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Active cold sore"><span>Active cold sore</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Immunosuppression"><span>Immunosuppression</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Severe autoimmune disease"><span>Severe autoimmune disease</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="Allergy to local anaesthetic"><span>Allergy to local anaesthetic</span></label>
+          <label class="opt"><input type="checkbox" name="Contraindications" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Please provide details</label><textarea name="Contraindication details"></textarea></div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Disclosure confirmation" value="I confirm I have disclosed all medical conditions and understand that failure to disclose relevant information may increase my risk of complications."><span>I confirm I have disclosed all medical conditions and understand failure to disclose may increase my risk.</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+    </div>
+
+    <!-- PHOTOGRAPHY -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">14</span><h2 class="sec-t">Clinical photographs</h2></div>
+      <div class="notice">Photographs are used for assessment, treatment planning, medical records, monitoring progress, before/after comparison, and clinical documentation, and are stored securely as part of your treatment record.</div>
+      <div class="f" data-group><label class="q">Please tick your photography consent <span class="req">*</span></label>
+        <div class="opts" data-min="1">
+          <label class="opt"><input type="checkbox" name="Photography consent" value="I consent to clinical photographs for medical records"><span>I consent to clinical photographs for <b>medical records</b>.</span></label>
+          <label class="opt"><input type="checkbox" name="Photography consent" value="I consent to images for educational or training purposes, identity protected where possible"><span>I consent to my images for <b>educational/training</b> purposes, with identity protected where possible.</span></label>
+          <label class="opt"><input type="checkbox" name="Photography consent" value="I consent to Layali Clinic using my images for marketing (social media, website, advertising, promotional materials)"><span>I consent to my images for <b>marketing</b> (social media, website, advertising, promotional materials).</span></label>
+          <label class="opt"><input type="checkbox" name="Photography consent" value="I do NOT consent to marketing use, but understand clinical photographs may still be required for medical records"><span>I do <b>not</b> consent to marketing use (clinical photos may still be required for records).</span></label>
+        </div><div class="err-msg">Please tick at least one.</div></div>
+      <div class="f"><label class="q">Patient initials <span class="req">*</span></label><input type="text" name="Photography initials" required style="max-width:140px"></div>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">15</span><h2 class="sec-t">Payment</h2></div>
+      <div class="notice">Endolaser is an elective aesthetic procedure. The treatment fee has been explained to you. Payment is required as agreed by the clinic. <b>Deposits are non-refundable</b> unless otherwise stated. Once treatment has been carried out, <b>no refund</b> will be given. Results vary; additional treatment may be required and may incur additional cost. Review appointments do not automatically include free treatment, and corrective treatment may be chargeable depending on circumstances.</div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Payment acknowledgement" value="I understand and accept the payment, deposit and refund terms."><span>I understand and accept the payment, deposit and refund terms.</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+      <div class="f"><label class="q">Patient initials <span class="req">*</span></label><input type="text" name="Payment initials" required style="max-width:140px"></div>
+    </div>
+
+    <!-- AFTERCARE (collapsible) -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">16</span><h2 class="sec-t">Aftercare (please read)</h2></div>
+      <div class="notice">Following aftercare is essential to reduce risks and support healing. Failure to follow aftercare may increase the risk of infection, prolonged swelling, bruising, delayed healing, pigmentation changes, poor results, scarring and complications.</div>
+      <div class="faq">
+        <details><summary>Immediately after &amp; first 24–48 hours</summary><p>You may have swelling, bruising, tenderness, redness, tightness and mild discomfort, and small entry-point marks. Keep the area clean and dry; avoid touching entry points; no makeup over entry points for 24–48 hours; avoid alcohol, smoking/vaping and strenuous exercise; drink plenty of water; rest with your head elevated if face/neck treated. In the first 24–48 hours also avoid hot baths, saunas, steam rooms, sunbeds, excessive heat, swimming, rubbing/massaging the area, and active skincare. A clean cool compress may be used for short periods if advised — <b>do not apply ice directly to the skin</b>.</p></details>
+        <details><summary>Days 2–7</summary><p>You may still have swelling, bruising, tenderness and tightness. Gently cleanse and keep the area clean; avoid aggressive massage, active ingredients, retinol, acids and exfoliants; use SPF daily; continue to avoid saunas, steam rooms and sunbeds; hydrate well; eat protein-rich foods; walk gently to support circulation.</p></details>
+        <details><summary>Weeks 2–4 &amp; long-term</summary><p>Swelling and bruising should gradually improve. You may notice firmness, tightness, mild lumps, unevenness, numbness or sensitivity as part of normal healing. Continue to protect from sun, avoid harsh skincare if sensitive, attend reviews, and contact the clinic if symptoms worsen rather than improve. Long-term: maintain a stable weight, stay hydrated, eat a balanced protein-rich diet, avoid smoking, use SPF daily, avoid sunbeds, and follow your practitioner's maintenance advice.</p></details>
+        <details><summary>Managing side effects at home</summary><p><b>Swelling:</b> elevate head, hydrate, avoid alcohol 48–72h, avoid salt and intense exercise for the first week, cool compress 10 min if advised (never ice directly). <b>Bruising:</b> avoid alcohol, strenuous exercise and pressure; arnica if suitable; avoid aspirin/ibuprofen unless prescribed. <b>Pain:</b> paracetamol if suitable; rest; avoid pressure and sleeping on the area; do not take ibuprofen/aspirin/anti-inflammatories unless approved. <b>Tightness:</b> normal — hydrate, avoid over-manipulating, allow healing. <b>Lumps/firmness:</b> do not aggressively massage unless instructed; monitor; contact us if painful, red, hot or worsening. <b>Numbness:</b> avoid pressure and extreme heat/cold; monitor; contact us if it worsens or spreads. <b>Entry points:</b> keep clean, avoid makeup 24–48h, avoid swimming/hot tubs/saunas, don't pick scabs.</p></details>
+      </div>
+      <div class="notice warn"><h4>Contact Layali Clinic urgently if you experience</h4>
+        Increasing or severe pain · worsening or sudden swelling · increasing/spreading redness or heat · pus or discharge · fever · feeling unwell · blistering · skin turning white, grey, purple or black · severe asymmetry · loss of movement · worsening numbness · any symptom that concerns you. If seriously unwell, seek urgent medical care or call emergency services.
+        <div style="margin-top:10px"><b>Layali Clinic:</b> 07787&nbsp;708200 · info.lushlips@gmail.com</div>
+      </div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Aftercare agreement" value="I agree to follow all aftercare instructions provided by Layali Clinic."><span>I agree to follow all aftercare instructions provided by Layali Clinic.</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+    </div>
+
+    <!-- RESPONSIBILITIES & RIGHT TO DISCONTINUE -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">17</span><h2 class="sec-t">Your responsibilities</h2></div>
+      <div class="notice">You are responsible for: providing accurate medical history; informing the practitioner of medication, allergies and medical changes; following pre-care and aftercare; attending reviews; contacting the clinic promptly if concerns arise; and not withholding information that may affect safety. You have the right to discontinue or decline treatment at any time before the procedure begins, and the practitioner may refuse or stop treatment if they feel it is unsafe, unsuitable or not in your best interest.</div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Responsibilities acknowledgement" value="I understand and accept my responsibilities as listed."><span>I understand and accept my responsibilities.</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+    </div>
+
+    <!-- DATA PROCESSING -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">18</span><h2 class="sec-t">Your data</h2></div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Data processing consent" value="I have read the Privacy Notice and consent to Layali Clinic processing my personal and health information to provide my care."><span>I have read the <a href="privacy.html" target="_blank">Privacy Notice</a> and consent to Layali Clinic processing my personal &amp; health information to provide my care.</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+    </div>
+
+    <!-- FINAL CONSENT -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">19</span><h2 class="sec-t">Final consent &amp; signature</h2></div>
+      <div class="notice"><h4>Final consent statement</h4>
+        I voluntarily consent to undergo Endolaser treatment. I understand it is a minimally invasive procedure using a laser fibre beneath the skin to stimulate collagen, tighten tissue and, where appropriate, reduce localised fat. I understand results vary and no guarantee has been made. I understand swelling, bruising, tenderness, tightness, numbness, lumps, unevenness and temporary asymmetry may occur, and that complications can occur including (but not limited to) infection, burns, scarring, pigmentation changes, fibrosis, fat necrosis, contour irregularity, nerve irritation, prolonged numbness, unsatisfactory results and the need for further treatment. I have been provided with and understand the post-treatment instructions. I acknowledge this procedure is elective and I take full responsibility for my decision. I have read and understood the above; my questions have been answered satisfactorily; I accept the risks and complications; I will promptly inform Layali Clinic of any changes in my medical history; and I confirm I am able to read and understand English.</div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Final consent" value="I have read and understood all the above, my questions have been answered, I accept the risks, and I consent to Endolaser treatment."><span>I have read and understood all the above, my questions have been answered, and I <b>consent to Endolaser treatment</b>.</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+
+      <div class="f"><label class="q">Patient name (printed) <span class="req">*</span></label><input type="text" name="Patient name printed" required></div>
+      <div class="f" data-group id="sigField"><label class="q">Patient signature <span class="req">*</span><div class="hint">Sign with your finger or mouse.</div></label>
+        <div class="sigwrap"><canvas class="sig"></canvas><div class="sig-base"></div><button type="button" class="sig-clear" id="sigClear">Clear</button></div>
+        <div class="err-msg">Please add your signature.</div></div>
+      <div class="f"><label class="q">Date <span class="req">*</span></label><input type="date" name="Date signed" required></div>
+
+      <div class="notice" style="margin-top:6px"><b>Practitioner declaration (completed at the clinic):</b> the practitioner confirms they have discussed the procedure, benefits, risks, complications, alternatives, aftercare and recovery, and that the patient has had the opportunity to ask questions. Practitioner: <b>Husna Panjabi</b>. Signature &amp; date are recorded on the clinical record at your appointment.</div>
+    </div>
+
+    <button type="submit" class="submit">Submit my consent</button>
+    <p class="foot">Sent securely to Layali Clinic and stored for your treatment record. · <a href="privacy.html">Privacy Notice</a></p>
+  </form>
+
+  <div class="done" id="doneScreen"><div class="tick">&check;</div><h2>Thank you</h2>
+    <p>Your consent has been received by Layali Clinic. If anything about your health changes before your appointment, please let us know on 07787 708200.</p></div>
+  <p class="foot">Layali Clinic · 442 Lea Bridge Road, Leyton, E10 7DT · 07787 708200 · <a href="privacy.html">Privacy Notice</a></p>
+</div>
+<script src="pack.js"></script>
+</body></html>

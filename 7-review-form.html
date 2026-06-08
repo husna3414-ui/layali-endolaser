@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Endolaser — How Are You Healing? | Layali Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head><body>
+<div class="wrap">
+  <header class="hero">
+    <img class="logo" src="logo.jpg" alt="Layali Clinic">
+    <span class="kicker">Endolaser · Check-in</span>
+    <h1>How Are You Healing?</h1>
+    <p class="sub">It's been a week or two since your treatment — we'd love a quick update to make sure you're recovering beautifully.</p>
+  </header>
+
+  <form data-pack-form="Endolaser Review" data-pdf-title="Endolaser Review Form" data-autoresponse="Thank you for your update — we're so glad to be looking after you. If you flagged a concern, we'll be in touch shortly. — Layali Clinic" novalidate>
+    <div class="card">
+      <div class="f"><label class="q">Your name <span class="req">*</span></label><input type="text" name="Name" required></div>
+      <div class="f"><label class="q">Email <span class="req">*</span><div class="hint">For your confirmation copy.</div></label><input type="email" name="Email" required></div>
+      <div class="f" data-group><label class="q">How is your healing going? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-radio>
+          <label class="opt"><input type="checkbox" name="Healing" value="Excellent"><span>Excellent — feeling great</span></label>
+          <label class="opt"><input type="checkbox" name="Healing" value="Good"><span>Good — settling nicely</span></label>
+          <label class="opt"><input type="checkbox" name="Healing" value="Concerned"><span>Concerned — I'd like advice</span></label>
+        </div><div class="err-msg">Please choose one.</div></div>
+
+      <div class="f" data-group><label class="q">Any side effects? <span class="req">*</span><div class="hint">Tick all that apply.</div></label>
+        <div class="opts grid-opts" data-min="1" data-none="None">
+          <label class="opt"><input type="checkbox" name="Side effects" value="None"><span>None</span></label>
+          <label class="opt"><input type="checkbox" name="Side effects" value="Bruising"><span>Bruising</span></label>
+          <label class="opt"><input type="checkbox" name="Side effects" value="Swelling"><span>Swelling</span></label>
+          <label class="opt"><input type="checkbox" name="Side effects" value="Pain"><span>Pain</span></label>
+          <label class="opt"><input type="checkbox" name="Side effects" value="Possible infection"><span>Possible infection</span></label>
+        </div><div class="err-msg">Please select at least one (or “None”).</div></div>
+
+      <div class="f" data-group><label class="q">How happy are you so far? <span class="req">*</span><div class="hint">1 = not happy · 10 = thrilled</div></label>
+        <div class="scale" data-min="1">
+          <label><input type="radio" name="Satisfaction (1-10)" value="1">1</label><label><input type="radio" name="Satisfaction (1-10)" value="2">2</label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="3">3</label><label><input type="radio" name="Satisfaction (1-10)" value="4">4</label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="5">5</label><label><input type="radio" name="Satisfaction (1-10)" value="6">6</label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="7">7</label><label><input type="radio" name="Satisfaction (1-10)" value="8">8</label>
+          <label><input type="radio" name="Satisfaction (1-10)" value="9">9</label><label><input type="radio" name="Satisfaction (1-10)" value="10">10</label>
+        </div><div class="err-msg">Please choose a score.</div></div>
+
+      <div class="f"><label class="q">Anything you'd like to tell us?</label><textarea name="Comments"></textarea></div>
+      <div class="f"><label class="q">Upload a photo of the area (optional)<div class="hint">Helps us check your progress.</div></label><input type="file" name="attachment" accept="image/*,.heic"></div>
+    </div>
+
+    <button type="submit" class="submit">Send my update</button>
+    <p class="foot">Sent securely to Layali Clinic. If you're worried, please also call us on 07787 708200.</p>
+  </form>
+
+  <div class="done" id="doneScreen"><div class="tick">&check;</div><h2>Thank you</h2>
+    <p>We've got your update. If you flagged a concern, we'll be in touch — and you can always call us on 07787 708200.</p></div>
+  <p class="foot">Layali Clinic · 442 Lea Bridge Road, Leyton, E10 7DT · 07787 708200 · <a href="privacy.html">Privacy Notice</a></p>
+</div>
+<script src="pack.js"></script>
+</body></html>

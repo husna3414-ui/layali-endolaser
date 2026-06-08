@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Endolaser — Share Your Results | Layali Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head><body>
+<div class="wrap">
+  <header class="hero">
+    <img class="logo" src="logo.jpg" alt="Layali Clinic">
+    <span class="kicker">Endolaser · Your Results</span>
+    <h1>Loving Your Results?</h1>
+    <p class="sub">Now your Endolaser result has had time to bloom, we'd be so grateful if you'd share how you feel.</p>
+  </header>
+
+  <form data-pack-form="Endolaser Testimonial" data-pdf-title="Endolaser Results &amp; Testimonial" data-autoresponse="Thank you so much for sharing your results and kind words — it truly means the world to a small clinic like ours. With love, Layali Clinic" novalidate>
+    <div class="card">
+      <div class="f"><label class="q">Your name <span class="req">*</span></label><input type="text" name="Name" required></div>
+      <div class="f"><label class="q">Email <span class="req">*</span><div class="hint">For your confirmation copy.</div></label><input type="email" name="Email" required></div>
+
+      <div class="f" data-group><label class="q">How happy are you with your result? <span class="req">*</span><div class="hint">1 = not happy · 10 = absolutely thrilled</div></label>
+        <div class="scale" data-min="1">
+          <label><input type="radio" name="Happiness (1-10)" value="1">1</label><label><input type="radio" name="Happiness (1-10)" value="2">2</label>
+          <label><input type="radio" name="Happiness (1-10)" value="3">3</label><label><input type="radio" name="Happiness (1-10)" value="4">4</label>
+          <label><input type="radio" name="Happiness (1-10)" value="5">5</label><label><input type="radio" name="Happiness (1-10)" value="6">6</label>
+          <label><input type="radio" name="Happiness (1-10)" value="7">7</label><label><input type="radio" name="Happiness (1-10)" value="8">8</label>
+          <label><input type="radio" name="Happiness (1-10)" value="9">9</label><label><input type="radio" name="Happiness (1-10)" value="10">10</label>
+        </div><div class="err-msg">Please choose a score.</div></div>
+
+      <div class="f"><label class="q">Your review <span class="req">*</span><div class="hint">In your own words — what did you think of your experience and result?</div></label><textarea name="Written review" required></textarea></div>
+
+      <div class="f" data-group><label class="q">May we use your words &amp; photos? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-all>
+          <label class="opt"><input type="checkbox" name="Marketing consent" value="I consent to my written review being used in marketing"><span>Yes — you may use my <b>written review</b> in your marketing.</span></label>
+          <label class="opt"><input type="checkbox" name="Before/after consent" value="I consent to my before &amp; after photos being used in marketing"><span>Yes — you may use my <b>before &amp; after photos</b> in your marketing.</span></label>
+        </div><div class="err-msg">Please confirm both, or use “Other” to tell us your preference.</div></div>
+      <p style="font-size:12.5px;color:var(--muted);margin:-6px 0 14px">Prefer to keep things private? That's completely fine — just skip this form or reply to let us know.</p>
+
+      <div class="f"><label class="q">Upload your current photo (optional)<div class="hint">For your before &amp; after, if you're happy to.</div></label><input type="file" name="attachment" accept="image/*,.heic"></div>
+
+      <div class="notice"><b>Would you share the love?</b> A Google review means the world to a small clinic and helps other people find us.
+        <div style="margin-top:10px"><a class="btn-ghost" href="EDIT_YOUR_GOOGLE_REVIEW_LINK">Leave a Google review →</a></div>
+        <div style="font-size:12px;margin-top:8px;color:var(--muted)">Husna — replace <code>EDIT_YOUR_GOOGLE_REVIEW_LINK</code> with your Google review URL.</div>
+      </div>
+    </div>
+
+    <button type="submit" class="submit">Share my results</button>
+    <p class="foot">Sent securely to Layali Clinic. Thank you for trusting us with your skin.</p>
+  </form>
+
+  <div class="done" id="doneScreen"><div class="tick">&check;</div><h2>Thank you so much</h2>
+    <p>Your kind words have reached us and truly make our day. We can't wait to see you again at Layali Clinic.</p></div>
+  <p class="foot">Layali Clinic · 442 Lea Bridge Road, Leyton, E10 7DT · 07787 708200 · <a href="privacy.html">Privacy Notice</a></p>
+</div>
+<script src="pack.js"></script>
+</body></html>
