@@ -92,22 +92,28 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ---- Configure the form for Formsubmit ---- */
   const form = document.querySelector('form[data-pack-form]');
   if (!form) return;
-  form.setAttribute('method', 'POST');
-  form.setAttribute('enctype', 'multipart/form-data');
-  form.setAttribute('action', 'https://formsubmit.co/' + CLINIC_EMAIL);
-
   const hidden = (name, val) => { const i = document.createElement('input'); i.type = 'hidden'; i.name = name; i.value = val; form.appendChild(i); return i; };
   const hasEmail = !!form.querySelector('input[type=email], input[name="Email"]');
   hidden('_subject', (form.dataset.packForm || 'Form') + ' — ' + CLINIC_NAME);
   hidden('_template', 'table');
   hidden('_captcha', 'false');
   if (hasEmail && form.dataset.autoresponse) hidden('_autoresponse', form.dataset.autoresponse);
-  const nextInput = hidden('_next', '');           // set to the thank-you page at submit time
-  hidden('Signature captured', canvas ? 'see attached PDF' : 'n/a');
+  hidden('Signature captured', canvas ? 'yes (drawn on form)' : 'n/a');
 
-  /* ---- Submit ---- */
+  const doneScreen = document.getElementById('doneScreen');
+  const showError = (msg) => {
+    let e = document.getElementById('submitError');
+    if (!e) { e = document.createElement('p'); e.id = 'submitError';
+      e.style.cssText = 'color:#b4564c;font-size:13.5px;text-align:center;margin:12px 0;line-height:1.5';
+      const b = form.querySelector('.submit'); b.parentNode.insertBefore(e, b.nextSibling); }
+    e.innerHTML = msg; e.style.display = 'block';
+  };
+
+  /* ---- Submit (Formsubmit AJAX — reliable, in-page success + clear errors) ---- */
   form.addEventListener('submit', async ev => {
-    ev.preventDefault(); clearErrors(); let ok = true, firstBad = null;
+    ev.preventDefault(); clearErrors();
+    const prevErr = document.getElementById('submitError'); if (prevErr) prevErr.style.display = 'none';
+    let ok = true, firstBad = null;
 
     form.querySelectorAll('input[required],textarea[required],select[required]').forEach(el => {
       if (el.type === 'file') { if (!el.files.length) { ok = false; flag(el); firstBad = firstBad || el; } return; }
@@ -125,25 +131,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!ok) { (firstBad || form).scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
 
-    const btn = form.querySelector('.submit'); if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+    const btn = form.querySelector('.submit'); const label = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
 
-    /* Build the signed PDF and attach it as a file so it reaches the clinic inbox */
+    const data = new FormData(form);
+    // attach the signed PDF (delivered when the plan supports attachments; the full typed record always sends)
     try {
-      const fd = new FormData(form); const seen = {}, order = [];
-      for (const [k, v] of fd.entries()) { if (k === 'attachment' || k.charAt(0) === '_' || typeof v !== 'string') continue;
+      const seen = {}, order = [];
+      for (const [k, v] of data.entries()) { if (k === 'attachment' || k.charAt(0) === '_' || typeof v !== 'string') continue;
         if (seen[k] !== undefined) seen[k] += ', ' + v; else { seen[k] = v; order.push(k); } }
       const rows = order.map(k => [k, seen[k]]);
       const pdf = buildPDF(rows, form.dataset.pdfTitle || form.dataset.packForm);
       const fname = (form.dataset.packForm || 'form').replace(/\s+/g, '-').toLowerCase() + '-' + (seen['Last name'] || seen['Name'] || seen['Client name'] || 'client') + '.pdf';
-      const dt = new DataTransfer(); dt.items.add(new File([pdf], fname, { type: 'application/pdf' }));
-      let pdfInput = form.querySelector('input[type=file][data-pdf]');
-      if (!pdfInput) { pdfInput = document.createElement('input'); pdfInput.type = 'file'; pdfInput.name = 'Signed PDF'; pdfInput.setAttribute('data-pdf', '1'); pdfInput.style.display = 'none'; form.appendChild(pdfInput); }
-      pdfInput.files = dt.files;
-    } catch (e) { /* if attaching fails, the form still submits with all answers as text */ }
+      data.append('attachment', new File([pdf], fname, { type: 'application/pdf' }));
+    } catch (e) {}
 
-    /* Redirect to the branded thank-you page after sending */
-    try { nextInput.value = new URL('thank-you.html', window.location.href).href; } catch (e) {}
-
-    form.submit();   // native submit → Formsubmit emails clinic + client, then redirects
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/' + CLINIC_EMAIL, {
+        method: 'POST', body: data, headers: { 'Accept': 'application/json' }
+      });
+      const out = await res.json().catch(() => ({}));
+      const success = out.success === true || out.success === 'true';
+      if (success) {
+        form.style.display = 'none';
+        const h = document.querySelector('header.hero'); if (h) h.style.display = 'none';
+        if (doneScreen) doneScreen.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (out.message && /activat|confirm/i.test(out.message)) {
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+        showError('<b>Almost live.</b> Layali Clinic must click the one-time activation link just emailed to <b>' + CLINIC_EMAIL + '</b>, then this form works for everyone. (You only do this once.)');
+      } else {
+        throw new Error(out.message || 'Submission failed');
+      }
+    } catch (err) {
+      if (btn) { btn.disabled = false; btn.textContent = label; }
+      showError('Sorry, we couldn’t send the form just now. Please check your connection and try again.' +
+        (location.protocol === 'file:' ? '<br><b>Tip:</b> open your live web link rather than the file on your computer — forms only send from the hosted site.' : ''));
+    }
   });
 });
