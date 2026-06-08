@@ -150,10 +150,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      // text/plain + no-cors → Apps Script processes it server-side (response is opaque)
+      // text/plain + no-cors → Apps Script processes it server-side.
+      // redirect:'manual' stops the browser following Google's cross-origin
+      // redirect (which throws in Safari/iOS); the script has already run by then.
       await fetch(SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
+        redirect: 'manual',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(payload)
       });
