@@ -12,7 +12,17 @@
 <meta property="og:image" content="https://husna3414-ui.github.io/layali-endolaser/logo.jpg">
 <meta property="og:url" content="https://husna3414-ui.github.io/layali-endolaser/1-treatment-guide.html">
 <meta name="twitter:card" content="summary_large_image">
+<style>
+  #scrollbar{position:fixed;top:0;left:0;height:3px;width:0;z-index:70;background:linear-gradient(90deg,var(--gold),var(--gold-deep));transition:width .12s ease}
+  .reveal-on .card{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal-on .card.in{opacity:1;transform:none}
+  header.hero>*{animation:heroIn .85s ease both}
+  header.hero h1{animation-delay:.04s}header.hero .sub{animation-delay:.08s}header.hero>div{animation-delay:.12s}
+  @keyframes heroIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.reveal-on .card{opacity:1!important;transform:none!important}header.hero>*{animation:none!important}}
+</style>
 </head><body>
+<div id="scrollbar"></div>
 <div class="wrap guide">
   <header class="hero">
     <img class="logo" src="logo.jpg" alt="Layali Clinic">
@@ -233,5 +243,19 @@
     window.addEventListener('scroll',function(){var y=window.scrollY||document.documentElement.scrollTop;
       if(y>640&&!shown){shown=true;b.style.transform='translateY(0)';}
       else if(y<=640&&shown){shown=false;b.style.transform='translateY(120%)';}},{passive:true});})();
+</script>
+<script>
+  (function(){
+    var bar=document.getElementById('scrollbar');
+    function prog(){if(!bar)return;var h=document.documentElement,max=h.scrollHeight-h.clientHeight,top=h.scrollTop||document.body.scrollTop;bar.style.width=(max>0?top/max*100:0)+'%';}
+    window.addEventListener('scroll',prog,{passive:true});window.addEventListener('resize',prog);prog();
+    var wrap=document.querySelector('.wrap.guide');if(wrap)wrap.classList.add('reveal-on');
+    var cards=[].slice.call(document.querySelectorAll('.wrap.guide .card'));
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -7% 0px',threshold:.05});
+      cards.forEach(function(c){io.observe(c);});
+      setTimeout(function(){cards.forEach(function(c){c.classList.add('in');});},2600);
+    } else { cards.forEach(function(c){c.classList.add('in');}); }
+  })();
 </script>
 </body></html>
