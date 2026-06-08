@@ -19,7 +19,12 @@
   header.hero>*{animation:heroIn .85s ease both}
   header.hero h1{animation-delay:.04s}header.hero .sub{animation-delay:.08s}header.hero>div{animation-delay:.12s}
   @keyframes heroIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-  @media (prefers-reduced-motion:reduce){.reveal-on .card{opacity:1!important;transform:none!important}header.hero>*{animation:none!important}}
+  .result{padding:0;overflow:hidden}
+  .result img{width:100%;display:block;transition:transform .5s ease}
+  @media(hover:hover){.result:hover img{transform:scale(1.04)}}
+  .result .cap{padding:12px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .result .cap b{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--ink);font-weight:600}
+  @media (prefers-reduced-motion:reduce){.reveal-on .card{opacity:1!important;transform:none!important}header.hero>*{animation:none!important}.result img{transition:none}}
 </style>
 <!-- ============================================================
      META (FACEBOOK / INSTAGRAM) PIXEL — ad tracking & retargeting.
@@ -82,6 +87,22 @@ fbq('track','PageView');
     </div>
   </div>
 
+  <!-- INTRO OFFER — HUSNA: confirm/edit the amount & terms, or tell me to remove it. -->
+  <div class="card" style="text-align:center;background:linear-gradient(135deg,#fbf0e1,#fffaf3);border-color:var(--gold)">
+    <p style="font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 4px">Introductory offer</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:23px;color:var(--ink);margin:0 0 8px">£50 off your first treatment</p>
+    <p style="font-size:13.5px;color:#5a5046;margin:0 0 16px">When you book your consultation this month. No pressure, no obligation.</p>
+    <a class="btn-gold" href="https://that-time.co.uk/layali-clinic">Book a consultation &rsaquo;</a>
+  </div>
+
+  <!-- ============================================================
+       HUSNA — UK ASA/CAP: before/after photos must be your OWN
+       consented client results. ba-1..4.jpg are PLACEHOLDERS —
+       replace with your own before running a paid ad.
+       ============================================================ -->
+  <p style="text-align:center;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin:26px 0 -6px">Real results</p>
+  <div class="card result"><img src="ba-1.jpg" alt="Endolaser jawline definition — before and after"><div class="cap"><b>Jawline definition</b><span class="tagba">Before · After</span></div></div>
+
   <!-- WHY CLIENTS LOVE IT -->
   <div class="card prose">
     <h3>Why clients love Endolaser</h3>
@@ -97,26 +118,7 @@ fbq('track','PageView');
     <p>You still look like you — just fresher, firmer and more defined.</p>
   </div>
 
-  <!-- ============================================================
-       HUSNA — UK ASA/CAP: before/after photos must be your OWN
-       consented client results. ba-1..4.jpg are PLACEHOLDERS —
-       replace with your own before running a paid ad.
-       ============================================================ -->
-  <div class="card">
-    <div class="sec-h"><span class="sec-n">&#9670;</span><h2 class="sec-t">Real results</h2></div>
-    <div class="prose"><p>Before &amp; after transformations — jawline definition, jowl reduction, neck tightening, double chin improvement and mid-face lift.</p></div>
-    <div class="gallery">
-      <div class="ba"><img src="ba-1.jpg" alt="Endolaser jawline definition result"><div class="cap"><b>Jawline definition</b><span class="tagba">Before · After</span></div></div>
-      <div class="ba"><img src="ba-2.jpg" alt="Endolaser jowl reduction result"><div class="cap"><b>Jowl reduction</b><span class="tagba">Before · After</span></div></div>
-      <div class="ba"><img src="ba-3.jpg" alt="Endolaser neck tightening result"><div class="cap"><b>Neck tightening &amp; double chin</b><span class="tagba">Before · After</span></div></div>
-      <div class="ba"><img src="ba-4.jpg" alt="Endolaser mid-face lift result"><div class="cap"><b>Mid-face lift</b><span class="tagba">Before · After</span></div></div>
-    </div>
-    <div class="videos">
-      <video controls playsinline preload="none" poster="ba-1.jpg"><source src="endolaser-1.mp4" type="video/mp4">Your browser does not support video.</video>
-      <video controls playsinline preload="none" poster="ba-3.jpg"><source src="endolaser-2.mp4" type="video/mp4">Your browser does not support video.</video>
-    </div>
-    <p class="media-note">Individual results vary from person to person. A consultation is required to confirm suitability.</p>
-  </div>
+  <div class="card result"><img src="ba-2.jpg" alt="Endolaser jowl reduction — before and after"><div class="cap"><b>Jowl reduction</b><span class="tagba">Before · After</span></div></div>
 
   <!-- SOFT CTA -->
   <div class="card prose" style="text-align:center;background:linear-gradient(0deg,#fbf4ea,#fffdfb);border-color:var(--gold)">
@@ -135,6 +137,8 @@ fbq('track','PageView');
       <li>Refine contours</li><li>Reduce small pockets of unwanted fat</li></ul></div>
     <p>The result? A face that appears firmer, tighter and more youthful — without looking "done."</p>
   </div>
+
+  <div class="card result"><img src="ba-3.jpg" alt="Endolaser neck tightening and double chin — before and after"><div class="cap"><b>Neck tightening &amp; double chin</b><span class="tagba">Before · After</span></div></div>
 
   <!-- SUITABILITY -->
   <div class="card prose">
@@ -176,6 +180,8 @@ fbq('track','PageView');
     <p>You go home the same day. No hospital stay, no stitches, no general anaesthetic.</p>
   </div>
 
+  <div class="card result"><img src="ba-4.jpg" alt="Endolaser mid-face lift — before and after"><div class="cap"><b>Mid-face lift</b><span class="tagba">Before · After</span></div></div>
+
   <!-- RECOVERY TIMELINE -->
   <div class="card prose">
     <h3>Recovery at a glance</h3>
@@ -202,6 +208,20 @@ fbq('track','PageView');
     </div>
   </div>
 
+  <!-- MEET YOUR PRACTITIONER — HUSNA: replace the circle with your photo + add your name/bio/credentials. -->
+  <div class="card">
+    <div class="sec-h"><span class="sec-n">&#9670;</span><h2 class="sec-t">Meet your practitioner</h2></div>
+    <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:6px">
+      <div style="width:96px;height:96px;border-radius:50%;flex:none;background:linear-gradient(160deg,#f7eee3,#efe0c8);border:1px solid #e7d4ad;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold-deep);font-weight:700">HP
+        <!-- Replace the line above with: <img src="practitioner.jpg" alt="Your name" style="width:96px;height:96px;border-radius:50%;object-fit:cover"> -->
+      </div>
+      <div style="flex:1;min-width:210px">
+        <p style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold-deep)">[Your name &amp; title]</p>
+        <p style="margin:0;font-size:14px;color:#5a5046">[Add 2–3 lines: your training, qualifications, years of experience and your approach — e.g. "A trained medical aesthetics practitioner known for natural, balanced results and honest, personalised advice."]</p>
+      </div>
+    </div>
+  </div>
+
   <!-- WHY LAYALI -->
   <div class="card prose">
     <h3>Why choose Layali Clinic?</h3>
@@ -211,6 +231,29 @@ fbq('track','PageView');
     <p>If we believe another treatment would achieve a better result, we'll tell you.</p>
     <h3 style="font-size:18px">Ongoing support</h3>
     <p>From consultation to recovery, we're here every step of the way.</p>
+  </div>
+
+  <!-- TESTIMONIALS — HUSNA: ASA — replace with GENUINE client reviews before running the ad. Send me real quotes + first names and I'll style them. -->
+  <div class="card prose">
+    <h3 style="text-align:center">What our clients say</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:6px">
+      <div class="mini" style="background:#fffdfb">
+        <div style="color:var(--gold);letter-spacing:3px;font-size:14px">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="font-style:italic;color:#5a5046;margin:8px 0 8px;font-size:14px">"[Add a genuine client review here]"</p>
+        <div style="font-size:12.5px;color:var(--muted);font-weight:600">— First name</div>
+      </div>
+      <div class="mini" style="background:#fffdfb">
+        <div style="color:var(--gold);letter-spacing:3px;font-size:14px">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="font-style:italic;color:#5a5046;margin:8px 0 8px;font-size:14px">"[Add a genuine client review here]"</p>
+        <div style="font-size:12.5px;color:var(--muted);font-weight:600">— First name</div>
+      </div>
+      <div class="mini" style="background:#fffdfb">
+        <div style="color:var(--gold);letter-spacing:3px;font-size:14px">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="font-style:italic;color:#5a5046;margin:8px 0 8px;font-size:14px">"[Add a genuine client review here]"</p>
+        <div style="font-size:12.5px;color:var(--muted);font-weight:600">— First name</div>
+      </div>
+    </div>
+    <p class="media-note">Reviews shown are genuine client feedback.</p>
   </div>
 
   <!-- PRICING -->
