@@ -61,29 +61,69 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.err-msg').forEach(m => m.style.display = 'none'); };
   const flag = el => { const f = el.closest('.f'); if (f) { f.classList.add('field-bad'); const m = f.querySelector('.err-msg'); if (m) m.style.display = 'block'; } };
 
-  /* ---- Build a tidy PDF of answers (+signature); returns the jsPDF doc ---- */
-  function buildPDF(rows, title) {
+  /* ---- Build a COMPLETE legal PDF: the whole form as presented —
+         full declarations & risk wording, every option with [X]/[ ],
+         typed answers, timestamp and signature. Returns the jsPDF doc. ---- */
+  function buildPDF(formEl, title) {
     const { jsPDF } = window.jspdf; const doc = new jsPDF({ unit: 'pt', format: 'a4' });
-    const M = 46; let y = 64; const W = 595 - M * 2;
-    doc.setFont('helvetica', 'bold'); doc.setTextColor(140, 106, 59); doc.setFontSize(20);
+    const M = 46, W = 595 - M * 2; let y = 56;
+    const SKIP = ['script', 'style', 'button', 'canvas', 'noscript'];
+    const SKIPCLASS = ['sec-n', 'req', 'sig-base', 'sig-clear', 'submit', 'err-msg', 'done'];
+
+    const lines = [];
+    (function walk(node) {
+      node.childNodes.forEach(ch => {
+        if (ch.nodeType === 3) { const t = ch.textContent.replace(/\s+/g, ' ').trim(); if (t) lines.push({ s: 'body', t: t }); return; }
+        if (ch.nodeType !== 1) return;
+        const el = ch, tag = el.tagName.toLowerCase();
+        if (SKIP.indexOf(tag) >= 0) return;
+        if (el.classList && SKIPCLASS.some(c => el.classList.contains(c))) return;
+        if (tag === 'input') {
+          if (el.type === 'checkbox' || el.type === 'radio') return;
+          if (['text', 'email', 'tel', 'date', 'number'].indexOf(el.type) >= 0) lines.push({ s: 'answer', t: (el.value || '—') });
+          return;
+        }
+        if (tag === 'textarea') { lines.push({ s: 'answer', t: (el.value || '—') }); return; }
+        if (tag === 'label' && el.classList.contains('opt')) {
+          const cb = el.querySelector('input'); const span = el.querySelector('span');
+          const txt = (span ? span.textContent : el.textContent).replace(/\s+/g, ' ').trim();
+          lines.push({ s: (cb && cb.checked) ? 'checked' : 'body', t: (cb && cb.checked ? '[X] ' : '[  ] ') + txt });
+          return;
+        }
+        if (['h1', 'h2'].indexOf(tag) >= 0 || (el.classList && el.classList.contains('sec-t'))) { const t = el.textContent.replace(/\s+/g, ' ').trim(); if (t) lines.push({ s: 'heading', t: t }); return; }
+        if (tag === 'h3' || tag === 'h4' || tag === 'summary') { const t = el.textContent.replace(/\s+/g, ' ').trim(); if (t) lines.push({ s: 'subhead', t: t }); return; }
+        walk(el);
+      });
+    })(formEl);
+
+    doc.setFont('helvetica', 'bold'); doc.setTextColor(140, 106, 59); doc.setFontSize(18);
     doc.text('Layali Clinic', M, y);
-    doc.setFontSize(12); doc.setTextColor(60, 54, 48); doc.text(title || 'Form submission', M, y + 18);
-    doc.setDrawColor(220, 205, 185); doc.line(M, y + 28, M + W, y + 28); y += 50;
-    doc.setFontSize(10.5);
-    for (const [k, v] of rows) {
-      if (!v) continue;
-      doc.setFont('helvetica', 'bold'); doc.setTextColor(120, 90, 50);
-      const lh = doc.splitTextToSize(k + ':', W); doc.text(lh, M, y); y += lh.length * 13;
-      doc.setFont('helvetica', 'normal'); doc.setTextColor(45, 40, 36);
-      const vt = doc.splitTextToSize(String(v), W);
-      if (y + vt.length * 12 > 800) { doc.addPage(); y = 60; }
-      doc.text(vt, M, y); y += vt.length * 12 + 9;
-      if (y > 790) { doc.addPage(); y = 60; }
-    }
+    doc.setFontSize(11); doc.setTextColor(60, 54, 48); doc.text(title || 'Consent record', M, y + 16);
+    doc.setFontSize(8.5); doc.setTextColor(120, 110, 100);
+    let stamp = ''; try { stamp = new Date().toLocaleString('en-GB'); } catch (e) {}
+    doc.text('Completed electronically — ' + stamp, M, y + 30);
+    doc.setDrawColor(220, 205, 185); doc.line(M, y + 38, M + W, y + 38); y += 54;
+
+    lines.forEach(L => {
+      let size = 9.5, font = 'normal', color = [70, 64, 58], indent = 0, gap = 4;
+      if (L.s === 'heading') { size = 13; font = 'bold'; color = [140, 106, 59]; y += 8; gap = 5; }
+      else if (L.s === 'subhead') { size = 10.5; font = 'bold'; color = [120, 90, 50]; y += 2; }
+      else if (L.s === 'checked') { size = 9.5; font = 'bold'; color = [38, 38, 34]; indent = 2; }
+      else if (L.s === 'answer') { size = 10; font = 'bold'; color = [54, 82, 60]; indent = 12; }
+      doc.setFont('helvetica', font); doc.setFontSize(size); doc.setTextColor(color[0], color[1], color[2]);
+      const wrapped = doc.splitTextToSize(L.t, W - indent);
+      const need = wrapped.length * (size + 2.5);
+      if (y + need > 800) { doc.addPage(); y = 56; }
+      doc.text(wrapped, M + indent, y); y += need + gap;
+    });
+
     const sig = getSig();
-    if (sig) { if (y > 660) { doc.addPage(); y = 60; }
-      doc.setFont('helvetica', 'bold'); doc.setTextColor(120, 90, 50); doc.text('Signature:', M, y); y += 8;
-      try { doc.addImage(sig, 'PNG', M, y, 180, 70); } catch (e) {} }
+    if (sig) {
+      if (y + 96 > 800) { doc.addPage(); y = 56; }
+      doc.setFont('helvetica', 'bold'); doc.setFontSize(10.5); doc.setTextColor(120, 90, 50);
+      doc.text('Signature captured on this form:', M, y); y += 8;
+      try { doc.addImage(sig, 'PNG', M, y, 180, 70); y += 76; } catch (e) {}
+    }
     return doc;
   }
 
@@ -134,8 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // signed PDF → base64 for the email attachment
     let pdfBase64 = '', pdfName = '';
     try {
-      const rows = Object.keys(fields).map(k => [k, fields[k]]);
-      const doc = buildPDF(rows, form.dataset.pdfTitle || form.dataset.packForm);
+      const doc = buildPDF(form, form.dataset.pdfTitle || form.dataset.packForm);
       pdfBase64 = (doc.output('datauristring').split(',')[1]) || '';
       pdfName = (form.dataset.packForm || 'form').replace(/\s+/g, '-').toLowerCase() + '-' +
         (fields['Last name'] || fields['Name'] || fields['Client name'] || 'client') + '.pdf';
