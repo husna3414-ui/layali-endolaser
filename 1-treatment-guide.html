@@ -20,10 +20,14 @@
   header.hero h1{animation-delay:.04s}header.hero .sub{animation-delay:.08s}header.hero>div{animation-delay:.12s}
   @keyframes heroIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
   .result{padding:0;overflow:hidden}
-  .result img{width:100%;display:block;transition:transform .5s ease}
+  .result img{width:100%;display:block;aspect-ratio:3/2;object-fit:cover;object-position:center;transition:transform .5s ease}
   @media(hover:hover){.result:hover img{transform:scale(1.04)}}
   .result .cap{padding:12px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px}
   .result .cap b{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--ink);font-weight:600}
+  .carousel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:6px 2px 12px;scrollbar-width:none}
+  .carousel::-webkit-scrollbar{display:none}
+  .carousel>.mini{flex:0 0 86%;scroll-snap-align:center;margin:0}
+  @media(min-width:620px){.carousel>.mini{flex:0 0 47%}}
   @media (prefers-reduced-motion:reduce){.reveal-on .card{opacity:1!important;transform:none!important}header.hero>*{animation:none!important}.result img{transition:none}}
 </style>
 <!-- ============================================================
@@ -208,35 +212,11 @@ fbq('track','PageView');
     </div>
   </div>
 
-  <!-- MEET YOUR PRACTITIONER — HUSNA: replace the circle with your photo + add your name/bio/credentials. -->
-  <div class="card">
-    <div class="sec-h"><span class="sec-n">&#9670;</span><h2 class="sec-t">Meet your practitioner</h2></div>
-    <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:6px">
-      <div style="width:96px;height:96px;border-radius:50%;flex:none;background:linear-gradient(160deg,#f7eee3,#efe0c8);border:1px solid #e7d4ad;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold-deep);font-weight:700">HP
-        <!-- Replace the line above with: <img src="practitioner.jpg" alt="Your name" style="width:96px;height:96px;border-radius:50%;object-fit:cover"> -->
-      </div>
-      <div style="flex:1;min-width:210px">
-        <p style="margin:0 0 6px;font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold-deep)">[Your name &amp; title]</p>
-        <p style="margin:0;font-size:14px;color:#5a5046">[Add 2–3 lines: your training, qualifications, years of experience and your approach — e.g. "A trained medical aesthetics practitioner known for natural, balanced results and honest, personalised advice."]</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- WHY LAYALI -->
-  <div class="card prose">
-    <h3>Why choose Layali Clinic?</h3>
-    <h3 style="font-size:18px">A personalised approach</h3>
-    <p>No two faces age the same way. Every treatment is planned specifically around your facial anatomy, skin quality, degree of laxity and desired outcome.</p>
-    <h3 style="font-size:18px">Honest recommendations</h3>
-    <p>If we believe another treatment would achieve a better result, we'll tell you.</p>
-    <h3 style="font-size:18px">Ongoing support</h3>
-    <p>From consultation to recovery, we're here every step of the way.</p>
-  </div>
-
   <!-- TESTIMONIALS — genuine client reviews -->
   <div class="card prose">
     <h3 style="text-align:center">What our clients say</h3>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px;margin-top:6px">
+    <p style="text-align:center;font-size:12px;color:var(--muted);margin:-4px 0 10px">Swipe to read more &rsaquo;</p>
+    <div class="carousel">
       <div class="mini" style="background:#fffdfb;border-left:3px solid var(--gold)">
         <div style="color:var(--gold);letter-spacing:3px;font-size:14px">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p style="font-style:italic;color:#5a5046;margin:8px 0 8px;font-size:14px;line-height:1.6">"I was quite nervous before my appointment, but Husna immediately put me at ease. She took the time to explain everything properly, answered all my questions and made sure I understood what to expect during healing. The results have been amazing, but what stood out most was how supported I felt throughout the whole process."</p>
@@ -270,15 +250,15 @@ fbq('track','PageView');
   <div class="card prose">
     <h3>Pricing</h3>
     <p style="font-size:13px;color:var(--muted);margin-top:-2px">Tap any treatment to choose your date &amp; time and pay</p>
-    <a class="price-card" href="https://that-time.co.uk/service/250600/book?openingHours=1"><div><div class="name">Double Chin Reduction</div><div class="desc">Single session · tap to book</div></div><div class="amt">£650</div></a>
+    <a class="price-card" href="https://that-time.co.uk/service/250600/book?openingHours=1" style="border-color:var(--gold);background:linear-gradient(0deg,#fbf4ea,#fffdfb)"><div><div class="name">Double Chin Reduction <span style="color:var(--gold-deep);font-weight:600;font-size:12px">· Most popular</span></div><div class="desc">Single session · tap to book</div></div><div class="amt">£650</div></a>
     <a class="price-card" href="https://that-time.co.uk/service/250602/book?openingHours=1"><div><div class="name">Mid-Face &amp; Jowl Lift</div><div class="desc">Single session · tap to book</div></div><div class="amt">£750</div></a>
     <a class="price-card" href="https://that-time.co.uk/service/250603/book?openingHours=1"><div><div class="name">Neck Tightening</div><div class="desc">Single session · tap to book</div></div><div class="amt">£800</div></a>
-    <a class="price-card" href="https://that-time.co.uk/service/250606/book?openingHours=1" style="border-color:var(--gold);background:linear-gradient(0deg,#fbf4ea,#fffdfb)"><div><div class="name">Full Face, Double Chin &amp; Neck <span style="color:var(--gold-deep);font-weight:600;font-size:12px">· Most popular</span></div><div class="desc">Our most comprehensive · tap to book</div></div><div class="amt">£1,800</div></a>
+    <a class="price-card" href="https://that-time.co.uk/service/250606/book?openingHours=1" style="border-color:var(--gold);background:linear-gradient(0deg,#fbf4ea,#fffdfb)"><div><div class="name">Full Face, Double Chin &amp; Neck</div><div class="desc">Our most comprehensive · tap to book</div></div><div class="amt">£1,800</div></a>
     <p style="font-size:13px;color:var(--muted);margin:18px 0 8px;font-weight:600;letter-spacing:.02em">Body contouring</p>
     <a class="price-card" href="https://that-time.co.uk/service/250609/book?openingHours=1"><div><div class="name">Abdomen</div><div class="desc">Tighten skin &amp; reduce localised fat · tap to book</div></div><div class="amt">£1,500</div></a>
-    <a class="price-card" href="https://that-time.co.uk/service/250608/book?openingHours=1"><div><div class="name">Thighs / Hips</div><div class="desc">Contour &amp; tighten difficult areas · tap to book</div></div><div class="amt">£1,000</div></a>
+    <a class="price-card" href="https://that-time.co.uk/service/250608/book?openingHours=1"><div><div class="name">Thighs / Hips</div><div class="desc">Contour &amp; tighten difficult areas · tap to book</div></div><div class="amt">£1,500</div></a>
     <a class="price-card" href="https://that-time.co.uk/service/250607/book?openingHours=1"><div><div class="name">Any 2 Body Areas</div><div class="desc">Combine any two areas · best value · tap to book</div></div><div class="amt">£2,500</div></a>
-    <div class="notice">A deposit is required to secure your appointment and is deducted from your treatment total.</div>
+    <div class="notice">A deposit secures your appointment and is deducted from your treatment total. <b>Spread the cost — pay in instalments with Klarna.</b></div>
     <div style="text-align:center;margin:20px 0 4px"><a class="btn-gold" href="https://that-time.co.uk/layali-clinic">Book a consultation &rsaquo;</a></div>
     <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:8px">Not ready to book? <a href="https://wa.me/447787708200?text=Hi%20Layali%20Clinic%2C%20I'd%20love%20to%20know%20more%20about%20Endolaser" style="color:var(--gold-deep);font-weight:600">Ask us anything on WhatsApp &rsaquo;</a></p>
   </div>
