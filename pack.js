@@ -130,6 +130,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('form[data-pack-form]');
   if (!form) return;
 
+  /* ---- In-app browser warning: Instagram/Facebook/WhatsApp in-app browsers
+         silently break form submission. Tell the user to open it properly. ---- */
+  (function () {
+    var ua = navigator.userAgent || '';
+    if (/FBAN|FBAV|FB_IAB|FBIOS|Instagram|Line\/|Twitter|MicroMessenger|GSA\/|; wv\)/i.test(ua)) {
+      var b = document.createElement('div');
+      b.style.cssText = 'position:sticky;top:0;z-index:9999;background:#8a3b33;color:#fff;padding:13px 16px;font-size:13.5px;line-height:1.5;text-align:center;font-family:Jost,system-ui,sans-serif';
+      b.innerHTML = 'To complete this form, please open it in your browser — tap the <b>&#8226;&#8226;&#8226;</b> or <b>&#8220;Aa&#8221;</b> menu and choose <b>Open in Safari</b> / <b>Open in Chrome</b>, then fill it in there.';
+      document.body.insertBefore(b, document.body.firstChild);
+    }
+  })();
+
   const doneScreen = document.getElementById('doneScreen');
   const showError = (msg) => {
     let e = document.getElementById('submitError');
