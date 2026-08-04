@@ -241,3 +241,42 @@ a:focus-visible,.submit:focus-visible,.btn-ghost:focus-visible,.btn-gold:focus-v
   a{color:inherit;text-decoration:none}
   header.hero{padding:8px 0 12px}
 }
+
+/* ============================================================
+   Recovery journey + soft colour accents (used on aftercare guides)
+   A gentle palette beyond the brand gold: sage-green = healing /
+   reassurance, rose = caution. Kept soft so it stays premium.
+   ============================================================ */
+:root{--sage:#6f8f77;--sage-bg:#eef3ee;--sage-line:#d6e2d9;--rose-bg:#fbeeec;--rose-line:#ecc9c4;--rose-ink:#a5443a}
+
+/* vertical timeline with numbered badges on a gold→green healing line */
+.journey{position:relative;margin:14px 0 6px}
+.journey::before{content:'';position:absolute;left:21px;top:26px;bottom:26px;width:2px;border-radius:2px;
+  background:linear-gradient(180deg,var(--gold) 0%,#c79a5a 32%,var(--sage) 100%)}
+.journey .step{position:relative;display:flex;gap:16px;padding:0 0 16px}
+.journey .step:last-child{padding-bottom:0}
+.journey .dot{flex:none;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-family:'Marcellus',serif;font-size:13px;color:#fff;position:relative;z-index:1;background:var(--gold);
+  border:3px solid var(--card);box-shadow:0 0 0 1px var(--line),0 6px 14px -6px rgba(120,90,40,.5)}
+.journey .dot.d2{background:#c28f4c}
+.journey .dot.d3{background:#9ba86f}
+.journey .dot.d4{background:var(--sage)}
+.journey .dot.d5{background:#b9ac97}
+.journey .body{flex:1;background:#fbf6ee;border:1px solid var(--line);border-radius:13px;padding:13px 16px}
+.journey .step.heal .body{background:var(--sage-bg);border-color:var(--sage-line)}
+.journey .when{font-family:'Marcellus',serif;font-size:18px;color:var(--ink);margin:0 0 2px;letter-spacing:.01em}
+.journey .body p{margin:0;color:#5f5347;font-size:14px}
+
+/* small status tags for section headings */
+.tag-ok,.tag-urgent{display:inline-block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  border-radius:20px;padding:3px 10px;margin-left:10px;vertical-align:middle;font-weight:500}
+.tag-ok{color:var(--sage);background:var(--sage-bg);border:1px solid var(--sage-line)}
+.tag-urgent{color:var(--rose-ink);background:var(--rose-bg);border:1px solid var(--rose-line)}
+
+/* soft-tinted section cards */
+.card.tint-sage{background:var(--sage-bg);border-color:var(--sage-line)}
+.card.tint-sage .sec-h{border-bottom-color:var(--sage-line)}
+.card.tint-sage .sec-h::before{background:linear-gradient(var(--sage),#5c7a64)}
+.card.tint-rose{background:var(--rose-bg);border-color:var(--rose-line)}
+.card.tint-rose .sec-h{border-bottom-color:var(--rose-line)}
+.card.tint-rose .sec-h::before{background:linear-gradient(#c76a60,var(--rose-ink))}
