@@ -30,17 +30,23 @@ header.hero{text-align:center;padding:54px 18px 26px}
   font-size:15px;color:var(--gold-deep);margin:0 0 6px}
 .kicker{display:inline-block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--gold-deep);background:#fbf0e1;border:1px solid #ecd9bf;border-radius:20px;padding:4px 13px;margin-bottom:14px}
-h1{font-family:'Marcellus',serif;font-weight:400;font-size:34px;margin:.1em 0 .15em;line-height:1.15}
+h1{font-family:'Marcellus',serif;font-weight:400;font-size:35px;margin:.1em 0 .15em;line-height:1.12;letter-spacing:.012em}
 .sub{color:var(--muted);font-size:14.5px;max-width:48ch;margin:6px auto 0}
+/* hero flourish — a slim gold rule broken by a small centred diamond */
+header.hero::after{content:'◆';display:block;width:210px;margin:24px auto 2px;text-align:center;
+  color:var(--gold);font-size:9px;line-height:9px;
+  background:linear-gradient(var(--line),var(--line)) left center/88px 1px no-repeat,
+             linear-gradient(var(--line),var(--line)) right center/88px 1px no-repeat}
 
 /* ---------- Cards & sections ---------- */
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 26px;margin:18px 0;
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 28px;margin:20px 0;
   box-shadow:0 14px 44px -30px rgba(80,60,30,.42);scroll-margin-top:20px}
+@media(max-width:520px){.card{padding:24px 20px}}
 .sec-h{display:flex;align-items:center;gap:11px;margin:0 0 15px;padding:0 0 12px;border-bottom:1px solid var(--line)}
 .sec-h::before{content:'';flex:none;width:4px;height:22px;border-radius:2px;background:linear-gradient(var(--gold),var(--gold-deep))}
 .sec-h:has(.sec-n)::before{display:none}
 .sec-n{font-family:'Marcellus',serif;color:var(--gold);font-size:22px;font-weight:400;min-width:24px}
-.sec-t{font-family:'Marcellus',serif;font-size:24px;font-weight:400;margin:0;line-height:1.15;letter-spacing:.005em}
+.sec-t{font-family:'Marcellus',serif;font-size:25px;font-weight:400;margin:0;line-height:1.12;letter-spacing:.022em}
 .sec-d{color:var(--muted);font-size:13.5px;font-style:italic;margin:-7px 0 16px}
 
 /* ---------- Guide prose ---------- */
@@ -115,11 +121,20 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold);bo
 .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:520px){.row{grid-template-columns:1fr}}
 .opts{display:flex;flex-direction:column;gap:9px;margin-top:4px}
-.opt{display:flex;gap:11px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:12px;
-  cursor:pointer;background:#fffdfb;font-size:14.5px;line-height:1.4;transition:border-color .18s,background .18s,box-shadow .18s}
+.opt{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;border:1px solid var(--line);border-radius:12px;
+  cursor:pointer;background:#fffdfb;font-size:14.5px;line-height:1.45;transition:border-color .18s,background .18s}
 .opt:hover{border-color:var(--gold);background:#fffaf3}
-.opt input{margin-top:2px;accent-color:var(--gold-deep);width:17px;height:17px;flex:none}
-.opt.checked{border-color:var(--gold);background:linear-gradient(0deg,#fbf1e2,#fffdfb);box-shadow:0 4px 14px -8px rgba(184,145,96,.45)}
+/* custom gold tick-boxes / radios — replaces the utilitarian default control */
+.opt input[type=checkbox],.opt input[type=radio]{appearance:none;-webkit-appearance:none;margin:1px 0 0;flex:none;
+  width:20px;height:20px;border:1.5px solid #d9ccba;border-radius:6px;background:#fff;cursor:pointer;position:relative;
+  transition:border-color .15s,background .15s}
+.opt input[type=radio]{border-radius:50%}
+.opt input[type=checkbox]:checked,.opt input[type=radio]:checked{background:var(--gold-deep);border-color:var(--gold-deep)}
+.opt input[type=checkbox]:checked::after{content:'';position:absolute;left:6px;top:2.5px;width:5px;height:10px;
+  border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+.opt input[type=radio]:checked::after{content:'';position:absolute;left:50%;top:50%;width:8px;height:8px;
+  border-radius:50%;background:#fff;transform:translate(-50%,-50%)}
+.opt.checked{border-color:var(--gold);background:#fdf6ea}
 .grid-opts{display:grid;grid-template-columns:1fr 1fr;gap:9px}
 @media(max-width:560px){.grid-opts{grid-template-columns:1fr}}
 .scale{display:flex;gap:7px;flex-wrap:wrap}
