@@ -280,3 +280,14 @@ a:focus-visible,.submit:focus-visible,.btn-ghost:focus-visible,.btn-gold:focus-v
 .card.tint-rose{background:var(--rose-bg);border-color:var(--rose-line)}
 .card.tint-rose .sec-h{border-bottom-color:var(--rose-line)}
 .card.tint-rose .sec-h::before{background:linear-gradient(#c76a60,var(--rose-ink))}
+
+/* ---------- Aftercare acknowledgement (printable sign-off) ---------- */
+.ack{margin:10px 0 2px}
+.ack .item{display:flex;gap:13px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--line);
+  font-size:14.5px;color:#4a4138}
+.ack .item:last-child{border-bottom:0}
+.ack .box{flex:none;width:20px;height:20px;border:1.6px solid #cbbca6;border-radius:6px;margin-top:1px}
+.sign{margin:20px 0 2px;display:grid;gap:20px}
+.sign .fld{display:flex;align-items:flex-end;gap:12px}
+.sign .fld label{font-size:13px;color:var(--muted);white-space:nowrap;min-width:130px}
+.sign .fld .fill{flex:1;border-bottom:1px solid var(--rule);height:22px}
