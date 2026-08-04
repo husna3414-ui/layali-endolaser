@@ -1,7 +1,7 @@
 /* ============================================================
    LAYALI CLINIC — shared design system for all treatment packs
    Edit colours here once; every guide & form updates.
-   Display font: Fraunces (serif) · Body font: Jost (sans)
+   Display font: Marcellus (serif) · Body font: Jost (sans)
    ============================================================ */
 :root{
   --ink:#2b2622; --muted:#8a7f76; --line:#e7ddd2;
@@ -23,14 +23,14 @@ a{color:var(--gold-deep)}
 header.hero{text-align:center;padding:54px 18px 26px}
 .crest{width:62px;height:62px;margin:0 auto 14px;border-radius:50%;border:1.5px solid var(--gold);
   display:flex;align-items:center;justify-content:center;color:var(--gold-deep);
-  font-family:'Fraunces',serif;font-size:30px;font-weight:600;
+  font-family:'Marcellus',serif;font-size:30px;font-weight:400;
   background:linear-gradient(160deg,#fff,#f7eee3);box-shadow:0 6px 24px rgba(184,145,96,.18)}
 .logo{display:block;margin:0 auto 16px;width:162px;height:auto;mix-blend-mode:multiply}
-.brand{font-family:'Fraunces',serif;letter-spacing:.18em;text-transform:uppercase;
+.brand{font-family:'Marcellus',serif;letter-spacing:.18em;text-transform:uppercase;
   font-size:15px;color:var(--gold-deep);margin:0 0 6px}
 .kicker{display:inline-block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--gold-deep);background:#fbf0e1;border:1px solid #ecd9bf;border-radius:20px;padding:4px 13px;margin-bottom:14px}
-h1{font-family:'Fraunces',serif;font-weight:600;font-size:34px;margin:.1em 0 .15em;line-height:1.15}
+h1{font-family:'Marcellus',serif;font-weight:400;font-size:34px;margin:.1em 0 .15em;line-height:1.15}
 .sub{color:var(--muted);font-size:14.5px;max-width:48ch;margin:6px auto 0}
 
 /* ---------- Cards & sections ---------- */
@@ -39,13 +39,13 @@ h1{font-family:'Fraunces',serif;font-weight:600;font-size:34px;margin:.1em 0 .15
 .sec-h{display:flex;align-items:center;gap:11px;margin:0 0 15px;padding:0 0 12px;border-bottom:1px solid var(--line)}
 .sec-h::before{content:'';flex:none;width:4px;height:22px;border-radius:2px;background:linear-gradient(var(--gold),var(--gold-deep))}
 .sec-h:has(.sec-n)::before{display:none}
-.sec-n{font-family:'Fraunces',serif;color:var(--gold);font-size:22px;font-weight:600;min-width:24px}
-.sec-t{font-family:'Fraunces',serif;font-size:24px;font-weight:600;margin:0;line-height:1.15;letter-spacing:.005em}
+.sec-n{font-family:'Marcellus',serif;color:var(--gold);font-size:22px;font-weight:400;min-width:24px}
+.sec-t{font-family:'Marcellus',serif;font-size:24px;font-weight:400;margin:0;line-height:1.15;letter-spacing:.005em}
 .sec-d{color:var(--muted);font-size:13.5px;font-style:italic;margin:-7px 0 16px}
 
 /* ---------- Guide prose ---------- */
-.lead{font-family:'Fraunces',serif;font-size:21px;line-height:1.5;color:#4a4138;margin:0 0 6px}
-.prose h3{font-family:'Fraunces',serif;font-size:21px;font-weight:600;color:var(--gold-deep);margin:22px 0 8px}
+.lead{font-family:'Marcellus',serif;font-size:21px;line-height:1.5;color:#4a4138;margin:0 0 6px}
+.prose h3{font-family:'Marcellus',serif;font-size:21px;font-weight:400;color:var(--gold-deep);margin:22px 0 8px}
 .prose p{margin:0 0 12px}
 .prose ul{margin:0 0 14px;padding-left:0;list-style:none}
 .prose li{position:relative;padding:5px 0 5px 26px}
@@ -64,14 +64,14 @@ h1{font-family:'Fraunces',serif;font-weight:600;font-size:34px;margin:.1em 0 .15
 .tl-item{position:relative;padding:0 0 20px 26px}
 .tl-item::before{content:'';position:absolute;left:-7px;top:3px;width:12px;height:12px;border-radius:50%;
   background:var(--gold);border:2px solid #fff;box-shadow:0 0 0 2px var(--gold)}
-.tl-when{font-family:'Fraunces',serif;font-size:18px;font-weight:600;color:var(--gold-deep);margin:0 0 2px}
+.tl-when{font-family:'Marcellus',serif;font-size:18px;font-weight:400;color:var(--gold-deep);margin:0 0 2px}
 .tl-item p{margin:0;color:#5f5347;font-size:14px}
 
 /* ---------- Do / Don't & checklists ---------- */
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0}
 @media(max-width:560px){.cols{grid-template-columns:1fr}}
 .mini{border:1px solid var(--line);border-radius:14px;padding:16px 18px;background:#fffdfb}
-.mini h4{margin:0 0 10px;font-family:'Fraunces',serif;font-size:18px}
+.mini h4{margin:0 0 10px;font-family:'Marcellus',serif;font-size:18px}
 .mini.avoid h4{color:var(--err)} .mini.ok h4{color:var(--ok)}
 .mini ul{list-style:none;margin:0;padding:0}
 .mini li{position:relative;padding:5px 0 5px 24px;font-size:14px;color:#5a5046}
@@ -84,7 +84,7 @@ h1{font-family:'Fraunces',serif;font-weight:600;font-size:34px;margin:.1em 0 .15
   text-decoration:none;color:inherit;cursor:pointer;transition:.15s}
 a.price-card:hover{border-color:var(--gold);background:#fffaf3;transform:translateY(-1px)}
 .price-card .name{font-weight:500} .price-card .desc{color:var(--muted);font-size:13px}
-.price-card .amt{font-family:'Fraunces',serif;font-size:24px;font-weight:600;color:var(--gold-deep);white-space:nowrap}
+.price-card .amt{font-family:'Marcellus',serif;font-size:24px;font-weight:400;color:var(--gold-deep);white-space:nowrap}
 
 /* ---------- FAQ ---------- */
 .faq{border-top:1px solid var(--line)}
@@ -99,7 +99,7 @@ a.price-card:hover{border-color:var(--gold);background:#fffaf3;transform:transla
 .notice{background:var(--blush);border:1px solid #ecddd0;border-left:4px solid var(--gold);border-radius:12px;
   padding:16px 18px;margin:6px 0 16px;font-size:13.7px;color:#5f5347}
 .notice b{color:var(--ink)}
-.notice h4{font-family:'Fraunces',serif;font-size:18px;margin:0 0 6px;color:var(--gold-deep)}
+.notice h4{font-family:'Marcellus',serif;font-size:18px;margin:0 0 6px;color:var(--gold-deep)}
 .notice.warn{background:#fff4f3;border-color:#f3c9c4;border-left-color:var(--err);color:#8a3b33}
 
 /* ---------- Form fields ---------- */
@@ -155,7 +155,7 @@ canvas.sig{width:100%;height:170px;display:block;touch-action:none;cursor:crossh
 .done .tick{width:74px;height:74px;border-radius:50%;margin:0 auto 18px;
   background:linear-gradient(135deg,#f7eee3,#efe0c8);color:var(--gold-deep);border:1px solid #e7d4ad;
   display:flex;align-items:center;justify-content:center;font-size:34px}
-.done h2{font-family:'Fraunces',serif;font-size:30px;margin:0 0 8px}
+.done h2{font-family:'Marcellus',serif;font-size:30px;margin:0 0 8px}
 .done p{color:var(--muted);max-width:42ch;margin:6px auto}
 
 /* ---------- Config warning ---------- */
@@ -168,9 +168,9 @@ canvas.sig{width:100%;height:170px;display:block;touch-action:none;cursor:crossh
   border-radius:16px;padding:18px 20px;margin:12px 0;text-decoration:none;color:inherit;transition:.15s;
   box-shadow:0 10px 40px -30px rgba(80,60,30,.4)}
 .stage:hover{border-color:var(--gold);transform:translateY(-1px)}
-.stage .num{font-family:'Fraunces',serif;font-size:26px;font-weight:600;color:var(--gold);min-width:34px}
+.stage .num{font-family:'Marcellus',serif;font-size:26px;font-weight:400;color:var(--gold);min-width:34px}
 .stage .body{flex:1}
-.stage .t{font-family:'Fraunces',serif;font-size:20px;font-weight:600;margin:0}
+.stage .t{font-family:'Marcellus',serif;font-size:20px;font-weight:400;margin:0}
 .stage .d{color:var(--muted);font-size:13px;margin:2px 0 0}
 .stage .when{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-deep);
   background:#f6ece1;border-radius:20px;padding:4px 11px;white-space:nowrap}
@@ -183,7 +183,7 @@ canvas.sig{width:100%;height:170px;display:block;touch-action:none;cursor:crossh
 .ba{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 10px 40px -30px rgba(80,60,30,.4)}
 .ba img{width:100%;display:block}
 .ba .cap{font-size:12.5px;color:var(--muted);padding:10px 13px;display:flex;justify-content:space-between;align-items:center;gap:8px}
-.ba .cap b{color:var(--ink);font-weight:500;font-family:'Fraunces',serif;font-size:14.5px}
+.ba .cap b{color:var(--ink);font-weight:500;font-family:'Marcellus',serif;font-size:14.5px}
 .tagba{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);background:#f6ece1;
   border:1px solid #ecd9bf;border-radius:20px;padding:3px 9px;white-space:nowrap}
 .videos{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0}
@@ -194,7 +194,7 @@ canvas.sig{width:100%;height:170px;display:block;touch-action:none;cursor:crossh
 /* ---------- Comparison table ---------- */
 .compare{width:100%;border-collapse:collapse;font-size:13.3px;margin:10px 0 4px}
 .compare th,.compare td{border-bottom:1px solid var(--line);padding:11px 9px;text-align:left;vertical-align:top}
-.compare thead th{font-family:'Fraunces',serif;color:var(--gold-deep);font-size:15px;font-weight:600}
+.compare thead th{font-family:'Marcellus',serif;color:var(--gold-deep);font-size:15px;font-weight:400}
 .compare td:first-child{font-weight:500}
 .compare .hl td{background:#fbf4ea}
 
