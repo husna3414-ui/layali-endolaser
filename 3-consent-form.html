@@ -55,120 +55,660 @@ info.lushlips@gmail.com
         <input type="text" name="Postcode" placeholder="Postcode" required></div>
     </div>
 
+    <!-- ============================================================
+         STANDARD MEDICAL-HISTORY SECTION (canonical) — sections 2–17
+         ============================================================ -->
+
+    <!-- ===== 2. CURRENT HEALTH ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">2</span><h2 class="sec-t">Current health</h2></div>
+      <div class="f" data-group><label class="q">How would you describe your current general health? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single>
+          <label class="opt"><input type="checkbox" name="General health" value="Very good"><span>Very good</span></label>
+          <label class="opt"><input type="checkbox" name="General health" value="Good"><span>Good</span></label>
+          <label class="opt"><input type="checkbox" name="General health" value="Fair"><span>Fair</span></label>
+          <label class="opt"><input type="checkbox" name="General health" value="Poor"><span>Poor</span></label>
+          <label class="opt"><input type="checkbox" name="General health" value="Currently unwell"><span>Currently unwell</span></label>
+        </div><div class="err-msg">Please choose one.</div></div>
+      <div class="f" data-group><label class="q">Do you currently have any of the following? <span class="req">*</span><div class="hint">Select all that apply.</div></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Fever or high temperature"><span>Fever / high temperature</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Cold, flu or respiratory symptoms"><span>Cold, flu or respiratory symptoms</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="COVID-19 symptoms or recent positive test"><span>COVID-19 symptoms / recent positive</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Active infection"><span>Active infection</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Currently taking antibiotics"><span>Currently taking antibiotics</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Vomiting or diarrhoea"><span>Vomiting or diarrhoea</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Unexplained rash"><span>Unexplained rash</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Broken, irritated or infected skin"><span>Broken / irritated / infected skin</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Cold sore or herpes outbreak"><span>Cold sore / herpes outbreak</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Dental infection"><span>Dental infection</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Unexplained swelling or lump"><span>Unexplained swelling / lump</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Unexplained pain"><span>Unexplained pain</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Recent injury or trauma"><span>Recent injury / trauma</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Recent hospital admission"><span>Recent hospital admission</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="Currently awaiting medical investigations"><span>Awaiting medical investigations</span></label>
+          <label class="opt"><input type="checkbox" name="Current health issues" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Please provide details, including dates</label><textarea name="Current health details"></textarea></div>
+      <div class="f" data-group><label class="q">Have you had any significant change in your health in the last 3 months? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single>
+          <label class="opt"><input type="checkbox" name="Health change 3 months" value="Yes"><span>Yes</span></label>
+          <label class="opt"><input type="checkbox" name="Health change 3 months" value="No"><span>No</span></label>
+        </div><div class="err-msg">Please choose one.</div></div>
+      <div class="f"><label class="q">If yes, please explain</label><textarea name="Health change details"></textarea></div>
+    </div>
+
+    <!-- ===== 3. MEDICAL CONDITIONS ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">3</span><h2 class="sec-t">Medical conditions</h2></div>
+      <div class="f" data-group><label class="q">Do you currently have, or have you previously had, any of the following? <span class="req">*</span><div class="hint">Select all that apply. Tick “None of the above” only if none apply.</div></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Heart &amp; circulation</div>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Heart disease"><span>Heart disease</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous heart attack"><span>Previous heart attack</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Angina"><span>Angina</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Heart murmur"><span>Heart murmur</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Irregular heartbeat or arrhythmia"><span>Irregular heartbeat / arrhythmia</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Heart-valve condition"><span>Heart-valve condition</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Congenital heart condition"><span>Congenital heart condition</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Heart failure"><span>Heart failure</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="High blood pressure"><span>High blood pressure</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Low blood pressure"><span>Low blood pressure</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Poor circulation"><span>Poor circulation</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Varicose veins"><span>Varicose veins</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous blood clot"><span>Previous blood clot</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Deep-vein thrombosis"><span>Deep-vein thrombosis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Pulmonary embolism"><span>Pulmonary embolism</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Stroke or TIA"><span>Stroke or TIA</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Pacemaker or implanted cardiac device"><span>Pacemaker / cardiac device</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Blood &amp; bleeding</div>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Bleeding disorder"><span>Bleeding disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Blood-clotting disorder"><span>Blood-clotting disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Anaemia"><span>Anaemia</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Haemophilia"><span>Haemophilia</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Thrombophilia"><span>Thrombophilia</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Low platelet count"><span>Low platelet count</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="History of excessive bleeding"><span>History of excessive bleeding</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="History of excessive bruising"><span>History of excessive bruising</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous blood transfusion"><span>Previous blood transfusion</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Respiratory</div>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Asthma"><span>Asthma</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="COPD"><span>COPD</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Sleep apnoea"><span>Sleep apnoea</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Breathing difficulties"><span>Breathing difficulties</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Other lung or respiratory condition"><span>Other respiratory condition</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Diabetes, hormonal &amp; metabolic</div>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Type 1 diabetes"><span>Type 1 diabetes</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Type 2 diabetes"><span>Type 2 diabetes</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Prediabetes"><span>Prediabetes</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Thyroid condition"><span>Thyroid condition</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Adrenal condition"><span>Adrenal condition</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="PCOS"><span>PCOS</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Hormonal disorder"><span>Hormonal disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Metabolic condition"><span>Metabolic condition</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Obesity or significant recent weight change"><span>Obesity / recent weight change</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Neurological</div>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Epilepsy or seizures"><span>Epilepsy / seizures</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Migraine"><span>Migraine</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Multiple sclerosis"><span>Multiple sclerosis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Neuropathy or altered sensation"><span>Neuropathy / altered sensation</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Bell's palsy or facial weakness"><span>Bell's palsy / facial weakness</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Tremor or movement disorder"><span>Tremor / movement disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous nerve injury"><span>Previous nerve injury</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Fainting episodes"><span>Fainting episodes</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Loss of consciousness"><span>Loss of consciousness</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Other neurological condition"><span>Other neurological condition</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Autoimmune &amp; immune</div>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Autoimmune disease"><span>Autoimmune disease</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Rheumatoid arthritis"><span>Rheumatoid arthritis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Lupus"><span>Lupus</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Inflammatory bowel disease"><span>Inflammatory bowel disease</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Psoriatic arthritis"><span>Psoriatic arthritis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Immunodeficiency"><span>Immunodeficiency</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Immunosuppression"><span>Immunosuppression</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Organ transplant"><span>Organ transplant</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Currently receiving immune-suppressing treatment"><span>Immune-suppressing treatment</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Infection &amp; communicable</div>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="HIV"><span>HIV</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Hepatitis B"><span>Hepatitis B</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Hepatitis C"><span>Hepatitis C</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Tuberculosis"><span>Tuberculosis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Recurrent infections"><span>Recurrent infections</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Recurrent cold sores or herpes simplex"><span>Recurrent cold sores / herpes</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous MRSA"><span>Previous MRSA</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Other blood-borne or communicable infection"><span>Other communicable infection</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Liver, kidney &amp; digestive</div>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Liver disease"><span>Liver disease</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Fatty liver disease"><span>Fatty liver disease</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Cirrhosis"><span>Cirrhosis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Kidney disease"><span>Kidney disease</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Reduced kidney function"><span>Reduced kidney function</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Dialysis"><span>Dialysis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Gallbladder condition"><span>Gallbladder condition</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Stomach ulcer"><span>Stomach ulcer</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Severe acid reflux"><span>Severe acid reflux</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Other gastrointestinal condition"><span>Other GI condition</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Skin, scarring &amp; healing</div>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Eczema"><span>Eczema</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Psoriasis"><span>Psoriasis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Rosacea"><span>Rosacea</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Active acne"><span>Active acne</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Dermatitis"><span>Dermatitis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Skin infection"><span>Skin infection</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Recurrent boils or abscesses"><span>Recurrent boils / abscesses</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Keloid scarring"><span>Keloid scarring</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Hypertrophic scarring"><span>Hypertrophic scarring</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Poor or delayed wound healing"><span>Poor / delayed wound healing</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Abnormal pigmentation after injury"><span>Abnormal pigmentation after injury</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous skin necrosis"><span>Previous skin necrosis</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous vascular occlusion"><span>Previous vascular occlusion</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous filler complication"><span>Previous filler complication</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous laser or energy-device burn"><span>Previous laser / energy burn</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Cancer &amp; cancer treatment</div>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Current cancer"><span>Current cancer</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous cancer"><span>Previous cancer</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Currently undergoing cancer investigations"><span>Undergoing cancer investigations</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous chemotherapy"><span>Previous chemotherapy</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous radiotherapy"><span>Previous radiotherapy</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous immunotherapy"><span>Previous immunotherapy</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous cancer surgery"><span>Previous cancer surgery</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Family or genetic cancer syndrome"><span>Family / genetic cancer syndrome</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Other conditions</div>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Chronic pain condition"><span>Chronic pain condition</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Fibromyalgia"><span>Fibromyalgia</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Chronic fatigue syndrome"><span>Chronic fatigue syndrome</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Eating disorder"><span>Eating disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Body dysmorphic disorder"><span>Body dysmorphic disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Anxiety around procedures or needles"><span>Anxiety around procedures / needles</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Severe anxiety"><span>Severe anxiety</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Depression"><span>Depression</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Other mental-health condition"><span>Other mental-health condition</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="Other medical condition not listed"><span>Other medical condition</span></label>
+          <label class="opt"><input type="checkbox" name="Medical conditions" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Please provide details of every condition selected — diagnosis, treatment &amp; current status <span class="req">*</span></label><textarea name="Medical conditions details" required></textarea></div>
+    </div>
+
+    <!-- ===== 4. MEDICATION ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">4</span><h2 class="sec-t">Medication</h2></div>
+      <div class="f" data-group><label class="q">Are you currently taking any prescribed or non-prescribed medication? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single>
+          <label class="opt"><input type="checkbox" name="Taking medication" value="Yes"><span>Yes</span></label>
+          <label class="opt"><input type="checkbox" name="Taking medication" value="No"><span>No</span></label>
+        </div><div class="err-msg">Please choose one.</div></div>
+      <div class="f"><label class="q">If yes, list every medication — name, dose, frequency &amp; reason <span class="req">*</span><div class="hint">Write “None” if not applicable.</div></label><textarea name="Medication list" required></textarea></div>
+      <div class="f" data-group><label class="q">Do you currently use any of the following? <span class="req">*</span><div class="hint">Select all that apply.</div></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Blood thinners &amp; anti-inflammatories</div>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Aspirin"><span>Aspirin</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Warfarin"><span>Warfarin</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Apixaban"><span>Apixaban</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Rivaroxaban"><span>Rivaroxaban</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Dabigatran"><span>Dabigatran</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Edoxaban"><span>Edoxaban</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Clopidogrel"><span>Clopidogrel</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Heparin"><span>Heparin</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Other anticoagulant or blood thinner"><span>Other anticoagulant</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Ibuprofen"><span>Ibuprofen</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Naproxen"><span>Naproxen</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Diclofenac"><span>Diclofenac</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Other NSAID"><span>Other NSAID</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Steroids &amp; immune treatments</div>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Oral steroids"><span>Oral steroids</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Steroid injections"><span>Steroid injections</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Steroid creams on the treatment area"><span>Steroid creams on the area</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Immunosuppressant medicine"><span>Immunosuppressant</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Biologic medicine"><span>Biologic medicine</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Chemotherapy"><span>Chemotherapy</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Immunotherapy"><span>Immunotherapy</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Skin &amp; acne medication</div>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Isotretinoin or Roaccutane"><span>Isotretinoin / Roaccutane</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Tretinoin"><span>Tretinoin</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Prescription retinoid"><span>Prescription retinoid</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Oral antibiotics for acne"><span>Oral antibiotics for acne</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Other prescription skin medication"><span>Other skin medication</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Diabetes &amp; weight management</div>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Insulin"><span>Insulin</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Metformin"><span>Metformin</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Semaglutide"><span>Semaglutide</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Tirzepatide"><span>Tirzepatide</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Liraglutide"><span>Liraglutide</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Other diabetes medicine"><span>Other diabetes medicine</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Other weight-management medication"><span>Other weight-management med</span></label>
+          <div style="grid-column:1/-1;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 0">Other relevant medication</div>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Antibiotics"><span>Antibiotics</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Antiviral medication"><span>Antiviral medication</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Antifungal medication"><span>Antifungal medication</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Blood-pressure medication"><span>Blood-pressure medication</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Heart medication"><span>Heart medication</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Epilepsy medication"><span>Epilepsy medication</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Antidepressant medication"><span>Antidepressant</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Antipsychotic medication"><span>Antipsychotic</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Anti-anxiety medication"><span>Anti-anxiety medication</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Thyroid medication"><span>Thyroid medication</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Hormonal contraception"><span>Hormonal contraception</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Hormone-replacement therapy"><span>HRT</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Fertility medication"><span>Fertility medication</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Pain medication"><span>Pain medication</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="Muscle relaxant"><span>Muscle relaxant</span></label>
+          <label class="opt"><input type="checkbox" name="Medication types" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Please provide further details where required</label><textarea name="Medication details"></textarea></div>
+      <div class="f" data-group><label class="q">Have you started, stopped or changed any medication in the last 3 months? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single>
+          <label class="opt"><input type="checkbox" name="Medication change" value="Yes"><span>Yes</span></label>
+          <label class="opt"><input type="checkbox" name="Medication change" value="No"><span>No</span></label>
+        </div><div class="err-msg">Please choose one.</div></div>
+      <div class="f"><label class="q">If yes, provide details</label><textarea name="Medication change details"></textarea></div>
+      <div class="notice">Please do <b>not</b> stop or alter prescribed medication unless advised by the clinician who prescribed it.</div>
+    </div>
+
+    <!-- ===== 5. VITAMINS, HERBAL PRODUCTS & SUPPLEMENTS ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">5</span><h2 class="sec-t">Vitamins, herbal products &amp; supplements</h2></div>
+      <div class="f" data-group><label class="q">Are you currently taking any vitamins, herbal products or supplements? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single>
+          <label class="opt"><input type="checkbox" name="Taking supplements" value="Yes"><span>Yes</span></label>
+          <label class="opt"><input type="checkbox" name="Taking supplements" value="No"><span>No</span></label>
+        </div><div class="err-msg">Please choose one.</div></div>
+      <div class="f" data-group><label class="q">Do you take any of the following? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <label class="opt"><input type="checkbox" name="Supplements" value="Fish oil or omega-3"><span>Fish oil / omega-3</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="Vitamin E"><span>Vitamin E</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="Ginkgo biloba"><span>Ginkgo biloba</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="Garlic supplements"><span>Garlic supplements</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="Ginger supplements"><span>Ginger supplements</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="Turmeric or curcumin"><span>Turmeric / curcumin</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="Ginseng"><span>Ginseng</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="St John's wort"><span>St John's wort</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="Evening primrose oil"><span>Evening primrose oil</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="High-dose multivitamins"><span>High-dose multivitamins</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="Protein or gym supplements"><span>Protein / gym supplements</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="Herbal medication"><span>Herbal medication</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="Other supplement"><span>Other supplement</span></label>
+          <label class="opt"><input type="checkbox" name="Supplements" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Please list every supplement, including dose and frequency</label><textarea name="Supplements details"></textarea></div>
+    </div>
+
+    <!-- ===== 6. ALLERGIES & PREVIOUS REACTIONS ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">6</span><h2 class="sec-t">Allergies &amp; previous reactions</h2></div>
+      <div class="f" data-group><label class="q">Do you have any known allergies? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single>
+          <label class="opt"><input type="checkbox" name="Has allergies" value="Yes"><span>Yes</span></label>
+          <label class="opt"><input type="checkbox" name="Has allergies" value="No"><span>No</span></label>
+        </div><div class="err-msg">Please choose one.</div></div>
+      <div class="f" data-group><label class="q">Have you ever had an allergic or adverse reaction to any of the following? <span class="req">*</span><div class="hint">Select all that apply.</div></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <label class="opt"><input type="checkbox" name="Allergies" value="Prescription medication"><span>Prescription medication</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Antibiotics"><span>Antibiotics</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Penicillin"><span>Penicillin</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Painkillers"><span>Painkillers</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Anti-inflammatory medication"><span>Anti-inflammatory medication</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Local anaesthetic"><span>Local anaesthetic</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Lidocaine"><span>Lidocaine</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Adrenaline or epinephrine"><span>Adrenaline / epinephrine</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Hyaluronic-acid filler"><span>Hyaluronic-acid filler</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Hyaluronidase"><span>Hyaluronidase</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Botulinum toxin"><span>Botulinum toxin</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Collagen-stimulating injectable"><span>Collagen-stimulating injectable</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Fat-dissolving product"><span>Fat-dissolving product</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Chlorhexidine"><span>Chlorhexidine</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Iodine"><span>Iodine</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Latex"><span>Latex</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Plasters or medical adhesive"><span>Plasters / medical adhesive</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Dressings"><span>Dressings</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Silicone"><span>Silicone</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Metal"><span>Metal</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Bee or wasp stings"><span>Bee / wasp stings</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Food"><span>Food</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Skincare or cosmetic product"><span>Skincare / cosmetic product</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Previous injectable treatment"><span>Previous injectable treatment</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Previous laser or energy-based treatment"><span>Previous laser / energy treatment</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="Other"><span>Other</span></label>
+          <label class="opt"><input type="checkbox" name="Allergies" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Please identify the substance, describe the reaction and when it occurred <span class="req">*</span><div class="hint">Write “None” if not applicable.</div></label><textarea name="Allergy details" required></textarea></div>
+      <div class="f" data-group><label class="q">Have you ever had anaphylaxis or needed emergency treatment for an allergic reaction? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single>
+          <label class="opt"><input type="checkbox" name="Anaphylaxis history" value="Yes"><span>Yes</span></label>
+          <label class="opt"><input type="checkbox" name="Anaphylaxis history" value="No"><span>No</span></label>
+        </div><div class="err-msg">Please choose one.</div></div>
+      <div class="f"><label class="q">If yes, please provide details</label><textarea name="Anaphylaxis details"></textarea></div>
+      <div class="f" data-group><label class="q">Do you carry an adrenaline auto-injector (e.g. EpiPen)? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single>
+          <label class="opt"><input type="checkbox" name="Carries EpiPen" value="Yes"><span>Yes</span></label>
+          <label class="opt"><input type="checkbox" name="Carries EpiPen" value="No"><span>No</span></label>
+          <label class="opt"><input type="checkbox" name="Carries EpiPen" value="Not applicable"><span>Not applicable</span></label>
+        </div><div class="err-msg">Please choose one.</div></div>
+    </div>
+
+    <!-- ===== 7. PREGNANCY, BREASTFEEDING & HORMONAL STATUS ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">7</span><h2 class="sec-t">Pregnancy, breastfeeding &amp; hormonal status</h2></div>
+      <div class="f" data-group><label class="q">Please select every statement that currently applies to you <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above apply to me">
+          <label class="opt"><input type="checkbox" name="Pregnancy/hormonal status" value="I am pregnant"><span>I am pregnant</span></label>
+          <label class="opt"><input type="checkbox" name="Pregnancy/hormonal status" value="I may be pregnant"><span>I may be pregnant</span></label>
+          <label class="opt"><input type="checkbox" name="Pregnancy/hormonal status" value="I am trying to conceive"><span>I am trying to conceive</span></label>
+          <label class="opt"><input type="checkbox" name="Pregnancy/hormonal status" value="I am undergoing IVF or fertility treatment"><span>Undergoing IVF / fertility treatment</span></label>
+          <label class="opt"><input type="checkbox" name="Pregnancy/hormonal status" value="I am breastfeeding"><span>I am breastfeeding</span></label>
+          <label class="opt"><input type="checkbox" name="Pregnancy/hormonal status" value="I have recently given birth"><span>Recently given birth</span></label>
+          <label class="opt"><input type="checkbox" name="Pregnancy/hormonal status" value="I am taking hormonal contraception"><span>Taking hormonal contraception</span></label>
+          <label class="opt"><input type="checkbox" name="Pregnancy/hormonal status" value="I am taking HRT"><span>Taking HRT</span></label>
+          <label class="opt"><input type="checkbox" name="Pregnancy/hormonal status" value="I am receiving gender-affirming hormone treatment"><span>Gender-affirming hormone treatment</span></label>
+          <label class="opt"><input type="checkbox" name="Pregnancy/hormonal status" value="I am post-menopausal"><span>Post-menopausal</span></label>
+          <label class="opt"><input type="checkbox" name="Pregnancy/hormonal status" value="I would prefer to discuss this privately"><span>Prefer to discuss privately</span></label>
+          <label class="opt"><input type="checkbox" name="Pregnancy/hormonal status" value="None of the above apply to me"><span>None of the above apply to me</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Please provide relevant details, including dates</label><textarea name="Pregnancy/hormonal details"></textarea></div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Pregnancy understanding" value="I understand that pregnancy, breastfeeding, fertility treatment or hormonal changes may affect whether a treatment can safely proceed."><span>I understand that pregnancy, breastfeeding, fertility treatment or hormonal changes may affect whether a treatment can safely proceed.</span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+    </div>
+
+    <!-- ===== 8. OPERATIONS, HOSPITAL TREATMENT & IMPLANTED DEVICES ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">8</span><h2 class="sec-t">Operations, hospital treatment &amp; implanted devices</h2></div>
+      <div class="f" data-group><label class="q">Have you ever had an operation or been admitted to hospital? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Operation history" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Operation history" value="No"><span>No</span></label></div><div class="err-msg">Please choose one.</div></div>
+      <div class="f"><label class="q">If yes, provide the procedure, date and reason</label><textarea name="Operation details"></textarea></div>
+      <div class="f" data-group><label class="q">Have you had surgery in the last 12 months? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Surgery 12 months" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Surgery 12 months" value="No"><span>No</span></label></div><div class="err-msg">Please choose one.</div></div>
+      <div class="f" data-group><label class="q">Are you currently awaiting surgery or another medical procedure? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Awaiting surgery" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Awaiting surgery" value="No"><span>No</span></label></div><div class="err-msg">Please choose one.</div></div>
+      <div class="f" data-group><label class="q">Do you have any implanted device or material? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1" data-none="No implanted devices">
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Pacemaker"><span>Pacemaker</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Implantable defibrillator"><span>Implantable defibrillator</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Metal plate, pin or screw"><span>Metal plate / pin / screw</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Cochlear implant"><span>Cochlear implant</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Neurostimulator"><span>Neurostimulator</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Insulin pump"><span>Insulin pump</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Continuous glucose monitor"><span>Continuous glucose monitor</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Contraceptive implant"><span>Contraceptive implant</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Breast implant"><span>Breast implant</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Facial implant"><span>Facial implant</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Dental implant"><span>Dental implant</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Surgical mesh"><span>Surgical mesh</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Permanent filler"><span>Permanent filler</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="Other implanted device"><span>Other implanted device</span></label>
+          <label class="opt"><input type="checkbox" name="Implanted devices" value="No implanted devices"><span>No implanted devices</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Please provide the implant/device type, location and date inserted</label><textarea name="Implant details"></textarea></div>
+    </div>
+
+    <!-- ===== 9. PREVIOUS AESTHETIC & COSMETIC TREATMENTS ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">9</span><h2 class="sec-t">Previous aesthetic &amp; cosmetic treatments</h2></div>
+      <div class="f" data-group><label class="q">Have you previously had any cosmetic, aesthetic or surgical treatment? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Had cosmetic treatment" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Had cosmetic treatment" value="No"><span>No</span></label></div><div class="err-msg">Please choose one.</div></div>
+      <div class="f"><label class="q">If yes, select all that apply</label>
+        <div class="opts grid-opts">
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Dermal filler"><span>Dermal filler</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Breast filler"><span>Breast filler</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Butt or hip filler"><span>Butt / hip filler</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Permanent or semi-permanent filler"><span>Permanent / semi-permanent filler</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Botulinum toxin / anti-wrinkle"><span>Anti-wrinkle / toxin</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Hyaluronidase / filler dissolving"><span>Filler dissolving</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Sculptra/Lanluma/collagen stimulator"><span>Collagen stimulator</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Skin booster"><span>Skin booster</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="PDO threads"><span>PDO threads</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Fat-dissolving injections"><span>Fat-dissolving injections</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Endolaser / fibre laser"><span>Endolaser / fibre laser</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="HIFU"><span>HIFU</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Radiofrequency"><span>Radiofrequency</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Laser treatment"><span>Laser treatment</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Microneedling"><span>Microneedling</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Chemical peel"><span>Chemical peel</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Liposuction"><span>Liposuction</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Fat transfer"><span>Fat transfer</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Breast implants"><span>Breast implants</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Breast uplift or reduction"><span>Breast uplift / reduction</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Facelift or neck lift"><span>Facelift / neck lift</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Other cosmetic surgery"><span>Other cosmetic surgery</span></label>
+          <label class="opt"><input type="checkbox" name="Previous treatments" value="Other treatment"><span>Other treatment</span></label>
+        </div></div>
+      <div class="f"><label class="q">For each: date, area treated, product/device used and clinic/practitioner (where known)</label><textarea name="Previous treatments details"></textarea></div>
+      <div class="f" data-group><label class="q">Have you ever had a complication or unsatisfactory reaction after an aesthetic/cosmetic treatment? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Previous complication" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Previous complication" value="No"><span>No</span></label></div><div class="err-msg">Please choose one.</div></div>
+      <div class="f"><label class="q">If yes, select all that apply</label>
+        <div class="opts grid-opts">
+          <label class="opt"><input type="checkbox" name="Complication types" value="Severe swelling"><span>Severe swelling</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Infection"><span>Infection</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Abscess"><span>Abscess</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Allergic reaction"><span>Allergic reaction</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Vascular occlusion"><span>Vascular occlusion</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Skin necrosis"><span>Skin necrosis</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Burn"><span>Burn</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Scarring"><span>Scarring</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Pigmentation change"><span>Pigmentation change</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Persistent lump or nodule"><span>Persistent lump / nodule</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Granuloma"><span>Granuloma</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Filler migration"><span>Filler migration</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Nerve injury"><span>Nerve injury</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Prolonged pain"><span>Prolonged pain</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Prolonged numbness"><span>Prolonged numbness</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Poor healing"><span>Poor healing</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Hospital treatment"><span>Hospital treatment</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Surgical treatment"><span>Surgical treatment</span></label>
+          <label class="opt"><input type="checkbox" name="Complication types" value="Other complication"><span>Other complication</span></label>
+        </div></div>
+      <div class="f"><label class="q">Please provide full details, including the treatment received for the complication</label><textarea name="Complication details"></textarea></div>
+    </div>
+
+    <!-- ===== 10. DENTAL TREATMENT & FACIAL INFECTION ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">10</span><h2 class="sec-t">Dental treatment &amp; facial infection</h2></div>
+      <div class="f" data-group><label class="q">In the last 4 weeks (or planned soon), have you had any of the following? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <label class="opt"><input type="checkbox" name="Dental" value="Routine dental exam or cleaning"><span>Routine exam / cleaning</span></label>
+          <label class="opt"><input type="checkbox" name="Dental" value="Dental filling"><span>Dental filling</span></label>
+          <label class="opt"><input type="checkbox" name="Dental" value="Root-canal treatment"><span>Root-canal treatment</span></label>
+          <label class="opt"><input type="checkbox" name="Dental" value="Tooth extraction"><span>Tooth extraction</span></label>
+          <label class="opt"><input type="checkbox" name="Dental" value="Dental implant"><span>Dental implant</span></label>
+          <label class="opt"><input type="checkbox" name="Dental" value="Gum infection"><span>Gum infection</span></label>
+          <label class="opt"><input type="checkbox" name="Dental" value="Tooth abscess"><span>Tooth abscess</span></label>
+          <label class="opt"><input type="checkbox" name="Dental" value="Facial or oral infection"><span>Facial / oral infection</span></label>
+          <label class="opt"><input type="checkbox" name="Dental" value="Dental surgery"><span>Dental surgery</span></label>
+          <label class="opt"><input type="checkbox" name="Dental" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Please provide the date and details</label><textarea name="Dental details"></textarea></div>
+    </div>
+
+    <!-- ===== 11. RECENT VACCINATIONS & MEDICAL PROCEDURES ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">11</span><h2 class="sec-t">Recent vaccinations &amp; medical procedures</h2></div>
+      <div class="f" data-group><label class="q">Have you had a vaccination in the last 4 weeks? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Recent vaccination" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Recent vaccination" value="No"><span>No</span></label></div><div class="err-msg">Please choose one.</div></div>
+      <div class="f"><label class="q">If yes, state the vaccination and date</label><input type="text" name="Vaccination details"></div>
+      <div class="f" data-group><label class="q">Have you recently had, or are you awaiting, any medical investigation or procedure? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <label class="opt"><input type="checkbox" name="Investigations" value="Mammogram"><span>Mammogram</span></label>
+          <label class="opt"><input type="checkbox" name="Investigations" value="Breast ultrasound"><span>Breast ultrasound</span></label>
+          <label class="opt"><input type="checkbox" name="Investigations" value="MRI scan"><span>MRI scan</span></label>
+          <label class="opt"><input type="checkbox" name="Investigations" value="CT scan"><span>CT scan</span></label>
+          <label class="opt"><input type="checkbox" name="Investigations" value="Biopsy"><span>Biopsy</span></label>
+          <label class="opt"><input type="checkbox" name="Investigations" value="Blood tests"><span>Blood tests</span></label>
+          <label class="opt"><input type="checkbox" name="Investigations" value="Endoscopy"><span>Endoscopy</span></label>
+          <label class="opt"><input type="checkbox" name="Investigations" value="Surgery"><span>Surgery</span></label>
+          <label class="opt"><input type="checkbox" name="Investigations" value="Other investigation or procedure"><span>Other investigation</span></label>
+          <label class="opt"><input type="checkbox" name="Investigations" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Please provide details and any available results</label><textarea name="Investigations details"></textarea></div>
+    </div>
+
+    <!-- ===== 12. BREAST HEALTH ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">12</span><h2 class="sec-t">Breast health</h2></div>
+      <div class="sec-d">Complete if you are considering breast filler, treatment near the breasts/chest, or if any answer may affect another treatment.</div>
+      <div class="f"><label class="q">Do you currently have, or have you previously had, any of the following?</label>
+        <div class="opts grid-opts">
+          <label class="opt"><input type="checkbox" name="Breast health" value="Breast lump"><span>Breast lump</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Unexplained breast pain"><span>Unexplained breast pain</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Nipple discharge"><span>Nipple discharge</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="New nipple inversion"><span>New nipple inversion</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Skin dimpling or puckering"><span>Skin dimpling / puckering</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Persistent breast rash or skin thickening"><span>Persistent rash / skin thickening</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Change in breast size or shape"><span>Change in size / shape</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Lump or swelling in the armpit"><span>Lump / swelling in armpit</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Mastitis"><span>Mastitis</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Breast abscess"><span>Breast abscess</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Abnormal mammogram, ultrasound or MRI"><span>Abnormal imaging</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Previous breast biopsy"><span>Previous breast biopsy</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Breast cancer"><span>Breast cancer</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Previous breast surgery"><span>Previous breast surgery</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Previous breast filler"><span>Previous breast filler</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Breast implants"><span>Breast implants</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Family history of breast or ovarian cancer"><span>Family history breast/ovarian cancer</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="BRCA or inherited cancer-risk condition"><span>BRCA / inherited cancer risk</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="Currently awaiting breast investigation"><span>Awaiting breast investigation</span></label>
+          <label class="opt"><input type="checkbox" name="Breast health" value="None of the above"><span>None of the above</span></label>
+        </div></div>
+      <div class="f"><label class="q">Please provide full details, including dates and investigation results</label><textarea name="Breast health details"></textarea></div>
+      <div class="row">
+        <div class="f"><label class="q">Date of your most recent breast screening (if applicable)</label><input type="text" name="Breast screening date"></div>
+        <div class="f" data-group><label class="q">Was the result normal?</label>
+          <div class="opts" data-min="0" data-single>
+            <label class="opt"><input type="checkbox" name="Breast screening result" value="Yes"><span>Yes</span></label>
+            <label class="opt"><input type="checkbox" name="Breast screening result" value="No"><span>No</span></label>
+            <label class="opt"><input type="checkbox" name="Breast screening result" value="Awaiting results"><span>Awaiting</span></label>
+            <label class="opt"><input type="checkbox" name="Breast screening result" value="Not applicable"><span>N/A</span></label>
+          </div></div>
+      </div>
+    </div>
+
+    <!-- ===== 13. LIFESTYLE ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">13</span><h2 class="sec-t">Lifestyle</h2></div>
+      <div class="f" data-group><label class="q">Do you currently use, or have you previously used, tobacco or nicotine? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1">
+          <label class="opt"><input type="checkbox" name="Nicotine use" value="Never"><span>Never</span></label>
+          <label class="opt"><input type="checkbox" name="Nicotine use" value="Current cigarette smoker"><span>Current cigarette smoker</span></label>
+          <label class="opt"><input type="checkbox" name="Nicotine use" value="Former cigarette smoker"><span>Former cigarette smoker</span></label>
+          <label class="opt"><input type="checkbox" name="Nicotine use" value="Current vape or e-cigarette user"><span>Current vape / e-cig</span></label>
+          <label class="opt"><input type="checkbox" name="Nicotine use" value="Former vape or e-cigarette user"><span>Former vape / e-cig</span></label>
+          <label class="opt"><input type="checkbox" name="Nicotine use" value="Shisha user"><span>Shisha user</span></label>
+          <label class="opt"><input type="checkbox" name="Nicotine use" value="Nicotine-pouch user"><span>Nicotine-pouch user</span></label>
+          <label class="opt"><input type="checkbox" name="Nicotine use" value="Other nicotine use"><span>Other nicotine use</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">How much do you currently use and how often? If you stopped, when?</label><input type="text" name="Nicotine details"></div>
+      <div class="f" data-group><label class="q">How often do you consume alcohol? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1" data-single>
+          <label class="opt"><input type="checkbox" name="Alcohol frequency" value="Never"><span>Never</span></label>
+          <label class="opt"><input type="checkbox" name="Alcohol frequency" value="Less than once per month"><span>&lt; once / month</span></label>
+          <label class="opt"><input type="checkbox" name="Alcohol frequency" value="One to three times per month"><span>1–3 times / month</span></label>
+          <label class="opt"><input type="checkbox" name="Alcohol frequency" value="Once or twice per week"><span>1–2 times / week</span></label>
+          <label class="opt"><input type="checkbox" name="Alcohol frequency" value="Three or more times per week"><span>3+ times / week</span></label>
+          <label class="opt"><input type="checkbox" name="Alcohol frequency" value="Daily"><span>Daily</span></label>
+        </div><div class="err-msg">Please choose one.</div></div>
+      <div class="f"><label class="q">Approximately how many units in a typical week?</label><input type="text" name="Alcohol units"></div>
+      <div class="f" data-group><label class="q">Have you consumed alcohol in the last 24 hours? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Alcohol 24h" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Alcohol 24h" value="No"><span>No</span></label></div><div class="err-msg">Please choose one.</div></div>
+      <div class="f" data-group><label class="q">Do you use, or have you used, recreational or non-prescribed substances? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1" data-single>
+          <label class="opt"><input type="checkbox" name="Recreational substances" value="Never"><span>Never</span></label>
+          <label class="opt"><input type="checkbox" name="Recreational substances" value="Current use"><span>Current use</span></label>
+          <label class="opt"><input type="checkbox" name="Recreational substances" value="Previous use"><span>Previous use</span></label>
+          <label class="opt"><input type="checkbox" name="Recreational substances" value="Prefer to discuss privately"><span>Prefer to discuss privately</span></label>
+        </div><div class="err-msg">Please choose one.</div></div>
+      <div class="f"><label class="q">If relevant, the substance, frequency and date of most recent use</label><input type="text" name="Substance details"></div>
+      <div class="sec-d">This information is requested only to assess your safety and is treated confidentially.</div>
+    </div>
+
+    <!-- ===== 14. MENTAL HEALTH, EXPECTATIONS & VOLUNTARY DECISION-MAKING ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">14</span><h2 class="sec-t">Mental health, expectations &amp; voluntary decision-making</h2></div>
+      <div class="f" data-group><label class="q">Have you ever been diagnosed with or treated for any of the following? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1" data-none="None of the above">
+          <label class="opt"><input type="checkbox" name="Mental health history" value="Anxiety"><span>Anxiety</span></label>
+          <label class="opt"><input type="checkbox" name="Mental health history" value="Depression"><span>Depression</span></label>
+          <label class="opt"><input type="checkbox" name="Mental health history" value="Body dysmorphic disorder"><span>Body dysmorphic disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Mental health history" value="Eating disorder"><span>Eating disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Mental health history" value="Obsessive-compulsive disorder"><span>OCD</span></label>
+          <label class="opt"><input type="checkbox" name="Mental health history" value="Bipolar disorder"><span>Bipolar disorder</span></label>
+          <label class="opt"><input type="checkbox" name="Mental health history" value="Psychosis"><span>Psychosis</span></label>
+          <label class="opt"><input type="checkbox" name="Mental health history" value="Post-traumatic stress disorder"><span>PTSD</span></label>
+          <label class="opt"><input type="checkbox" name="Mental health history" value="Another mental-health condition"><span>Another condition</span></label>
+          <label class="opt"><input type="checkbox" name="Mental health history" value="I would prefer to discuss this privately"><span>Prefer to discuss privately</span></label>
+          <label class="opt"><input type="checkbox" name="Mental health history" value="None of the above"><span>None of the above</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f" data-group><label class="q">Are you currently experiencing significant emotional distress or a mental-health crisis? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Current distress" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Current distress" value="No"><span>No</span></label><label class="opt"><input type="checkbox" name="Current distress" value="Prefer to discuss privately"><span>Prefer to discuss privately</span></label></div><div class="err-msg">Please choose one.</div></div>
+      <div class="f" data-group><label class="q">Are you currently receiving support or treatment for your mental health?</label>
+        <div class="opts" data-min="0" data-single><label class="opt"><input type="checkbox" name="Mental health support" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Mental health support" value="No"><span>No</span></label></div></div>
+      <div class="f"><label class="q">Please provide any information that may be relevant to your treatment</label><textarea name="Mental health notes"></textarea></div>
+      <div class="f" data-group><label class="q">Are you choosing this treatment freely and for yourself? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Choosing freely" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Choosing freely" value="No"><span>No</span></label><label class="opt"><input type="checkbox" name="Choosing freely" value="I am unsure"><span>Unsure</span></label></div><div class="err-msg">Please choose one.</div></div>
+      <div class="f" data-group><label class="q">Is anyone pressuring or encouraging you to have the treatment against your wishes? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Pressured" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Pressured" value="No"><span>No</span></label></div><div class="err-msg">Please choose one.</div></div>
+      <div class="f" data-group><label class="q">Do you believe the treatment will resolve major relationship, employment, financial or emotional difficulties? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Resolve difficulties" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Resolve difficulties" value="No"><span>No</span></label><label class="opt"><input type="checkbox" name="Resolve difficulties" value="Unsure"><span>Unsure</span></label></div><div class="err-msg">Please choose one.</div></div>
+      <div class="f" data-group><label class="q">Would you still consider treatment if the achievable result were subtle or different from your preferred result? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Subtle result acceptable" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Subtle result acceptable" value="No"><span>No</span></label><label class="opt"><input type="checkbox" name="Subtle result acceptable" value="I need further advice"><span>Need further advice</span></label></div><div class="err-msg">Please choose one.</div></div>
+    </div>
+
+    <!-- ===== 15. COMMUNICATION & ACCESSIBILITY ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">15</span><h2 class="sec-t">Communication &amp; accessibility</h2></div>
+      <div class="f" data-group><label class="q">Can you comfortably read and understand the information provided in English? <span class="req">*</span></label>
+        <div class="opts" data-min="1" data-single><label class="opt"><input type="checkbox" name="Reads English" value="Yes"><span>Yes</span></label><label class="opt"><input type="checkbox" name="Reads English" value="No"><span>No</span></label></div><div class="err-msg">Please choose one.</div></div>
+      <div class="f" data-group><label class="q">Would you benefit from any of the following? <span class="req">*</span></label>
+        <div class="opts grid-opts" data-min="1" data-none="No adjustment required">
+          <label class="opt"><input type="checkbox" name="Adjustments" value="Interpreter"><span>Interpreter</span></label>
+          <label class="opt"><input type="checkbox" name="Adjustments" value="Information in another language"><span>Info in another language</span></label>
+          <label class="opt"><input type="checkbox" name="Adjustments" value="Large-print information"><span>Large-print information</span></label>
+          <label class="opt"><input type="checkbox" name="Adjustments" value="Easy-read information"><span>Easy-read information</span></label>
+          <label class="opt"><input type="checkbox" name="Adjustments" value="Hearing support"><span>Hearing support</span></label>
+          <label class="opt"><input type="checkbox" name="Adjustments" value="Visual support"><span>Visual support</span></label>
+          <label class="opt"><input type="checkbox" name="Adjustments" value="Additional time to read and discuss"><span>Additional time</span></label>
+          <label class="opt"><input type="checkbox" name="Adjustments" value="Support from an advocate or trusted person"><span>Advocate / trusted person</span></label>
+          <label class="opt"><input type="checkbox" name="Adjustments" value="Another reasonable adjustment"><span>Another adjustment</span></label>
+          <label class="opt"><input type="checkbox" name="Adjustments" value="No adjustment required"><span>No adjustment required</span></label>
+        </div><div class="err-msg">Please make a selection.</div></div>
+      <div class="f"><label class="q">Please provide details</label><input type="text" name="Adjustments details"></div>
+    </div>
+
+    <!-- ===== 16. PRIVACY NOTICE ACKNOWLEDGEMENT ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">16</span><h2 class="sec-t">Privacy notice acknowledgement</h2></div>
+      <div class="f" data-group><div class="opts" data-min="1" data-single>
+        <label class="opt"><input type="checkbox" name="Privacy acknowledgement" value="I have been given access to Layali Clinic's Privacy Notice and understand my personal and health information will be recorded, securely stored and used to assess and provide my care."><span>I have been given access to Layali Clinic's <a href="privacy.html" target="_blank">Privacy Notice</a> and understand my personal &amp; health information will be recorded, securely stored and used to assess and provide my care. <span class="req">*</span></span></label>
+      </div><div class="err-msg">Please confirm to continue.</div></div>
+      <div class="sec-d">This acknowledgement is separate from consent to any treatment and separate from permission to use photographs for marketing.</div>
+    </div>
+
+    <!-- ===== 17. CLIENT MEDICAL-HISTORY DECLARATION ===== -->
+    <div class="card">
+      <div class="sec-h"><span class="sec-n">17</span><h2 class="sec-t">Your medical-history declaration</h2></div>
+      <div class="f" data-group><label class="q">Please confirm every statement <span class="req">*</span></label>
+        <div class="opts" data-all>
+          <label class="opt"><input type="checkbox" name="Medical declaration" value="The medical, medication, allergy and personal-history information I have provided is true, accurate and complete to the best of my knowledge."><span>The information I have provided is true, accurate and complete to the best of my knowledge.</span></label>
+          <label class="opt"><input type="checkbox" name="Medical declaration" value="I understand that withholding or inaccurate information could increase the risk of complications."><span>Withholding or inaccurate information could increase the risk of complications.</span></label>
+          <label class="opt"><input type="checkbox" name="Medical declaration" value="I will inform Layali Clinic immediately if my health, medication, allergies, pregnancy status or other relevant information changes before treatment."><span>I will inform the clinic immediately if my health, medication, allergies, pregnancy status or other relevant information changes before treatment.</span></label>
+          <label class="opt"><input type="checkbox" name="Medical declaration" value="I will update this medical history before every future treatment where my information has changed."><span>I will update this medical history before every future treatment where my information has changed.</span></label>
+          <label class="opt"><input type="checkbox" name="Medical declaration" value="I understand that completing this form does not confirm that I am suitable for treatment."><span>Completing this form does not confirm that I am suitable for treatment.</span></label>
+          <label class="opt"><input type="checkbox" name="Medical declaration" value="I understand the practitioner may postpone, adapt or decline treatment and may request GP, prescriber or specialist clearance if required for my safety."><span>The practitioner may postpone, adapt or decline treatment and may request GP/prescriber/specialist clearance if required for my safety.</span></label>
+          <label class="opt"><input type="checkbox" name="Medical declaration" value="I understand I should not stop or alter prescribed medication unless advised by the clinician who prescribed it."><span>I should not stop or alter prescribed medication unless advised by the clinician who prescribed it.</span></label>
+          <label class="opt"><input type="checkbox" name="Medical declaration" value="I confirm I have had the opportunity to provide additional information and ask questions."><span>I have had the opportunity to provide additional information and ask questions.</span></label>
+        </div><div class="err-msg">Please confirm all statements to proceed.</div></div>
+    </div>
+    <!-- ===== END STANDARD MEDICAL-HISTORY SECTION ===== -->
+
     <!-- INFORMED CONSENT -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">2</span><h2 class="sec-t">Informed consent</h2></div>
+      <div class="sec-h"><span class="sec-n">18</span><h2 class="sec-t">Informed consent</h2></div>
       <p>This informed consent form aims to ensure that you have comprehensive written information regarding the risks, benefits, alternatives, expected outcomes, recovery process and possible complications associated with Endolaser treatment.</p>
       <p>This document is intended to supplement your discussion with your practitioner and provide you with the essential details required to make an informed decision.</p>
       <p>It is very important that you thoroughly read and understand all information presented in this consent form. If you have any questions, concerns or uncertainties regarding the procedure, expected results, possible side effects, contraindications, aftercare or risks, you must discuss them with your practitioner before signing this form.</p>
       <p>By signing this form, you confirm that you understand the nature of the procedure, the potential risks and complications, the alternatives available, and that results cannot be guaranteed.</p>
     </div>
 
-    <!-- MEDICAL HISTORY -->
-    <div class="card">
-      <div class="sec-h"><span class="sec-n">3</span><h2 class="sec-t">Medical history</h2></div>
-      <div class="f" data-group><label class="q">Do you have any of the following medical conditions? <span class="req">*</span><div class="hint">Please tick all that apply.</div></label>
-        <div class="opts grid-opts" data-min="1" data-none="None of the above">
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Heart disease"><span>Heart disease</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="High blood pressure"><span>High blood pressure</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Low blood pressure"><span>Low blood pressure</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Diabetes"><span>Diabetes</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Epilepsy or seizures"><span>Epilepsy or seizures</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Blood clotting disorder"><span>Blood clotting disorder</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Bleeding disorder"><span>Bleeding disorder</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="History of excessive bruising"><span>History of excessive bruising</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Autoimmune disease"><span>Autoimmune disease</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Rheumatoid arthritis"><span>Rheumatoid arthritis</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Lupus"><span>Lupus</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Thyroid disorder"><span>Thyroid disorder</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Multiple sclerosis"><span>Multiple sclerosis</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Psoriasis"><span>Psoriasis</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Eczema"><span>Eczema</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Active acne in the treatment area"><span>Active acne in the treatment area</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Rosacea"><span>Rosacea</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Skin infection"><span>Skin infection</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Herpes simplex / cold sores"><span>Herpes simplex / cold sores</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Keloid scarring"><span>Keloid scarring</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Hypertrophic scarring"><span>Hypertrophic scarring</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Poor wound healing"><span>Poor wound healing</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Cancer or history of cancer"><span>Cancer or history of cancer</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous radiotherapy"><span>Previous radiotherapy</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Previous chemotherapy"><span>Previous chemotherapy</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Liver disease"><span>Liver disease</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Kidney disease"><span>Kidney disease</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Immune system disorder"><span>Immune system disorder</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="HIV / Hepatitis"><span>HIV / Hepatitis</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Fainting episodes"><span>Fainting episodes</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="Anxiety around procedures"><span>Anxiety around procedures</span></label>
-          <label class="opt"><input type="checkbox" name="Medical conditions" value="None of the above"><span>None of the above</span></label>
-        </div><div class="err-msg">Please make a selection (choose “None of the above” if none apply).</div></div>
-      <div class="f"><label class="q">Please provide further details if required</label><textarea name="Medical history details"></textarea></div>
-
-      <div class="f" data-group><label class="q">Are you currently taking any medication? <span class="req">*</span></label>
-        <div class="opts" data-min="1" data-radio>
-          <label class="opt"><input type="checkbox" name="Currently taking medication" value="Yes"><span>Yes</span></label>
-          <label class="opt"><input type="checkbox" name="Currently taking medication" value="No"><span>No</span></label>
-        </div><div class="err-msg">Please choose one.</div></div>
-      <div class="f"><label class="q">If yes, please list all medication<div class="hint">Including prescription, over-the-counter, herbal supplements and vitamins.</div></label><textarea name="Medication list"></textarea></div>
-
-      <div class="f" data-group><label class="q">Do you take any of the following? <span class="req">*</span></label>
-        <div class="opts grid-opts" data-min="1" data-none="None of the above">
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Aspirin"><span>Aspirin</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Warfarin"><span>Warfarin</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Apixaban"><span>Apixaban</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Rivaroxaban"><span>Rivaroxaban</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Clopidogrel"><span>Clopidogrel</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Heparin"><span>Heparin</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Blood thinning medication"><span>Blood thinning medication</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Steroids"><span>Steroids</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Roaccutane / Isotretinoin"><span>Roaccutane / Isotretinoin</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Antibiotics"><span>Antibiotics</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Anti-inflammatory medication"><span>Anti-inflammatory medication</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Ibuprofen"><span>Ibuprofen</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Naproxen"><span>Naproxen</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Fish oil"><span>Fish oil</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Vitamin E"><span>Vitamin E</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Herbal supplements"><span>Herbal supplements</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="Weight loss injections"><span>Weight loss injections</span></label>
-          <label class="opt"><input type="checkbox" name="Specific medication" value="None of the above"><span>None of the above</span></label>
-        </div><div class="err-msg">Please make a selection.</div></div>
-
-      <div class="f" data-group><label class="q">Have you ever had an allergic reaction to any of the following? <span class="req">*</span></label>
-        <div class="opts grid-opts" data-min="1" data-none="None of the above">
-          <label class="opt"><input type="checkbox" name="Allergies" value="Local anaesthetic"><span>Local anaesthetic</span></label>
-          <label class="opt"><input type="checkbox" name="Allergies" value="Lidocaine"><span>Lidocaine</span></label>
-          <label class="opt"><input type="checkbox" name="Allergies" value="Adrenaline / epinephrine"><span>Adrenaline / epinephrine</span></label>
-          <label class="opt"><input type="checkbox" name="Allergies" value="Plasters"><span>Plasters</span></label>
-          <label class="opt"><input type="checkbox" name="Allergies" value="Dressings"><span>Dressings</span></label>
-          <label class="opt"><input type="checkbox" name="Allergies" value="Chlorhexidine"><span>Chlorhexidine</span></label>
-          <label class="opt"><input type="checkbox" name="Allergies" value="Iodine"><span>Iodine</span></label>
-          <label class="opt"><input type="checkbox" name="Allergies" value="Latex"><span>Latex</span></label>
-          <label class="opt"><input type="checkbox" name="Allergies" value="Antibiotics"><span>Antibiotics</span></label>
-          <label class="opt"><input type="checkbox" name="Allergies" value="Painkillers"><span>Painkillers</span></label>
-          <label class="opt"><input type="checkbox" name="Allergies" value="Laser treatment"><span>Laser treatment</span></label>
-          <label class="opt"><input type="checkbox" name="Allergies" value="Skincare products"><span>Skincare products</span></label>
-          <label class="opt"><input type="checkbox" name="Allergies" value="None of the above"><span>None of the above</span></label>
-        </div><div class="err-msg">Please make a selection.</div></div>
-      <div class="f"><label class="q">If yes, please provide details</label><textarea name="Allergy details"></textarea></div>
-    </div>
-
-    <!-- PREGNANCY -->
-    <div class="card">
-      <div class="sec-h"><span class="sec-n">4</span><h2 class="sec-t">Pregnancy, breastfeeding &amp; female health</h2></div>
-      <div class="sec-d">I confirm that (please tick to confirm; if any do not apply, tell your practitioner):</div>
-      <div class="f" data-group><div class="opts">
-        <label class="opt"><input type="checkbox" name="Pregnancy declaration" value="I am not pregnant"><span>I am not pregnant</span></label>
-        <label class="opt"><input type="checkbox" name="Pregnancy declaration" value="I am not breastfeeding"><span>I am not breastfeeding</span></label>
-        <label class="opt"><input type="checkbox" name="Pregnancy declaration" value="I am not trying to conceive"><span>I am not trying to conceive</span></label>
-        <label class="opt"><input type="checkbox" name="Pregnancy declaration" value="I am not currently undergoing IVF or fertility treatment"><span>I am not currently undergoing IVF or fertility treatment</span></label>
-        <label class="opt"><input type="checkbox" name="Pregnancy declaration" value="I understand that Endolaser treatment is not recommended during pregnancy or breastfeeding"><span>I understand that Endolaser treatment is not recommended during pregnancy or breastfeeding</span></label>
-      </div></div>
-      <div class="f"><label class="q">If applicable, please provide any further information</label><textarea name="Pregnancy details"></textarea></div>
-    </div>
-
     <!-- PREVIOUS TREATMENTS -->
     <div class="card">
-      <div class="sec-h"><span class="sec-n">5</span><h2 class="sec-t">Previous aesthetic or surgical treatments</h2></div>
+      <div class="sec-h"><span class="sec-n">19</span><h2 class="sec-t">Previous aesthetic or surgical treatments</h2></div>
       <div class="f" data-group><label class="q">Have you previously had any of the following in or near the area being treated? <span class="req">*</span></label>
         <div class="opts grid-opts" data-min="1" data-none="None">
           <label class="opt"><input type="checkbox" name="Previous treatments" value="Dermal filler"><span>Dermal filler</span></label>
@@ -194,7 +734,7 @@ info.lushlips@gmail.com
 
     <!-- WHAT IS ENDOLASER -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">6</span><h2 class="sec-t">What is Endolaser?</h2></div>
+      <div class="sec-h"><span class="sec-n">20</span><h2 class="sec-t">What is Endolaser?</h2></div>
       <p>Endolaser is a minimally invasive laser treatment used to tighten skin, stimulate collagen production, improve skin laxity, contour the face or body, and reduce small areas of localised fat.</p>
       <p>The treatment involves inserting a very fine sterile laser fibre underneath the skin through a small entry point. Laser energy is then delivered beneath the skin to create controlled heating within the tissue.</p>
       <p>This controlled thermal effect may help to:</p>
@@ -204,7 +744,7 @@ info.lushlips@gmail.com
 
     <!-- TREATMENT AREAS -->
     <div class="card">
-      <div class="sec-h"><span class="sec-n">7</span><h2 class="sec-t">Treatment areas</h2></div>
+      <div class="sec-h"><span class="sec-n">21</span><h2 class="sec-t">Treatment areas</h2></div>
       <div class="sec-d">Endolaser may be performed on suitable areas including (the treatment area will be assessed by the practitioner before treatment):</div>
       <div class="f" data-group><label class="q">Area(s) to be treated <span class="req">*</span></label>
         <div class="opts grid-opts" data-min="1">
@@ -228,7 +768,7 @@ info.lushlips@gmail.com
 
     <!-- PROCEDURE -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">8</span><h2 class="sec-t">Procedure</h2></div>
+      <div class="sec-h"><span class="sec-n">22</span><h2 class="sec-t">Procedure</h2></div>
       <p>The treatment area will be assessed, marked and cleansed prior to treatment.</p>
       <p>A local anaesthetic may be used to improve comfort. A small entry point is created in the skin, and a fine sterile laser fibre is inserted under the skin.</p>
       <p>Laser energy is delivered into the tissue to create a controlled heating effect. The practitioner will move the fibre carefully through the treatment area according to the treatment plan.</p>
@@ -240,7 +780,7 @@ info.lushlips@gmail.com
 
     <!-- ANAESTHETIC -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">9</span><h2 class="sec-t">Anaesthetic</h2></div>
+      <div class="sec-h"><span class="sec-n">23</span><h2 class="sec-t">Anaesthetic</h2></div>
       <p>Local anaesthetic may be used during treatment.</p>
       <p>I understand that local anaesthetic carries its own potential risks, including but not limited to:</p>
       <ul><li>Stinging or burning during administration</li><li>Temporary numbness</li><li>Bruising</li><li>Swelling</li><li>Dizziness</li><li>Faintness</li><li>Allergic reaction</li><li>Temporary palpitations if adrenaline-containing anaesthetic is used</li></ul>
@@ -249,7 +789,7 @@ info.lushlips@gmail.com
 
     <!-- BENEFITS -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">10</span><h2 class="sec-t">Benefits</h2></div>
+      <div class="sec-h"><span class="sec-n">24</span><h2 class="sec-t">Benefits</h2></div>
       <p>Potential benefits of Endolaser may include:</p>
       <ul><li>Skin tightening</li><li>Improved facial contour</li><li>Improved jawline definition</li><li>Reduction in jowls</li><li>Improved neck firmness</li><li>Reduction in double chin fullness</li><li>Improved skin quality</li><li>Collagen stimulation</li><li>Reduction of small localised fat deposits</li><li>Improved confidence</li><li>Minimal downtime compared with surgery</li></ul>
       <p>I understand that results vary between individuals and cannot be guaranteed.</p>
@@ -257,7 +797,7 @@ info.lushlips@gmail.com
 
     <!-- RESULTS -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">11</span><h2 class="sec-t">Results and follow-up</h2></div>
+      <div class="sec-h"><span class="sec-n">25</span><h2 class="sec-t">Results and follow-up</h2></div>
       <p>Endolaser results develop gradually. Some tightening may be visible soon after treatment, but this may also be affected by swelling. The final result is not immediate.</p>
       <p>I understand that:</p>
       <ul><li>Swelling may temporarily hide or exaggerate the result.</li><li>Results usually develop over several weeks to months.</li><li>Collagen production may continue for 3–6 months.</li><li>Some clients may continue improving for up to 12 months.</li><li>One session may not achieve my desired result.</li><li>Additional treatment may be recommended.</li><li>Maintenance treatments may be required.</li><li>Ageing will continue naturally.</li><li>Lifestyle factors such as smoking, alcohol, diet, hydration, weight changes and sun exposure may affect the result.</li></ul>
@@ -266,7 +806,7 @@ info.lushlips@gmail.com
 
     <!-- ALTERNATIVES -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">12</span><h2 class="sec-t">Alternative treatments</h2></div>
+      <div class="sec-h"><span class="sec-n">26</span><h2 class="sec-t">Alternative treatments</h2></div>
       <p>I understand that alternative options may include:</p>
       <ul><li>No treatment</li><li>Surgical facelift</li><li>Surgical neck lift</li><li>Liposuction</li><li>Radiofrequency skin tightening</li><li>HIFU</li><li>RF microneedling</li><li>Thread lift</li><li>Dermal fillers</li><li>Fat dissolving injections</li><li>Skin boosters</li><li>Weight loss</li><li>Other practitioner-recommended treatments</li></ul>
       <p>I understand that I have the right to decline treatment or choose an alternative option.</p>
@@ -274,7 +814,7 @@ info.lushlips@gmail.com
 
     <!-- RISKS -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">13</span><h2 class="sec-t">Risks and complications</h2></div>
+      <div class="sec-h"><span class="sec-n">27</span><h2 class="sec-t">Risks and complications</h2></div>
       <p>Before undergoing this procedure, it is essential to clearly understand the associated risks.</p>
       <p>While every effort is made to minimise risks, no procedure is entirely risk-free. Endolaser is a minimally invasive procedure and involves the insertion of a laser fibre beneath the skin, meaning there are inherent and potential risks.</p>
       <p>The following risks may occur, and there may also be unforeseen risks that are not included on this list. Some complications may require medication, medical review, referral, further treatment, corrective procedures or hospital care.</p>
@@ -325,7 +865,7 @@ info.lushlips@gmail.com
 
     <!-- CONTRAINDICATIONS -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">14</span><h2 class="sec-t">Contraindications</h2></div>
+      <div class="sec-h"><span class="sec-n">28</span><h2 class="sec-t">Contraindications</h2></div>
       <p>Before undergoing Endolaser, it is essential to be aware of contraindications and circumstances that may restrict or prevent treatment. Endolaser may not be suitable if you have:</p>
       <ul><li>Pregnancy</li><li>Breastfeeding</li><li>Active infection</li><li>Fever or illness</li><li>Active skin infection in the treatment area</li><li>Open wounds</li><li>Severe acne in the treatment area</li><li>Active cold sores in the treatment area</li><li>Uncontrolled diabetes</li><li>Poor wound healing</li><li>Keloid scarring history</li><li>Bleeding disorder</li><li>Blood thinning medication use</li><li>Severe autoimmune disease</li><li>Immunosuppression</li><li>Recent surgery in the treatment area</li><li>Recent filler, threads or other aesthetic procedure in the treatment area</li><li>Unrealistic expectations</li><li>Significant medical conditions not cleared for treatment</li><li>Allergy to anaesthetic or products used</li><li>Active cancer or recent cancer treatment unless medically cleared</li></ul>
       <p>I confirm that I have disclosed all medical conditions and understand that failure to disclose relevant information may increase my risk of complications.</p>
@@ -354,7 +894,7 @@ info.lushlips@gmail.com
 
     <!-- CLINICAL PHOTOGRAPHS -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">15</span><h2 class="sec-t">Clinical photographs</h2></div>
+      <div class="sec-h"><span class="sec-n">29</span><h2 class="sec-t">Clinical photographs</h2></div>
       <p>I hereby authorise the taking of clinical photographs before, during and after my Endolaser treatment. I understand that photographs are used for assessment, treatment planning, medical records, monitoring progress, comparing before and after results, and insurance and clinical documentation. I understand that my clinical photographs will be stored securely as part of my treatment record.</p>
       <div class="f" data-group><label class="q">Please tick <span class="req">*</span></label>
         <div class="opts" data-min="1">
@@ -368,7 +908,7 @@ info.lushlips@gmail.com
 
     <!-- PAYMENT -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">16</span><h2 class="sec-t">Payment</h2></div>
+      <div class="sec-h"><span class="sec-n">30</span><h2 class="sec-t">Payment</h2></div>
       <p>I understand that Endolaser is an elective aesthetic procedure. I understand that:</p>
       <ul><li>The treatment fee has been explained to me.</li><li>Payment is required as agreed by the clinic.</li><li>Deposits are non-refundable unless otherwise stated by the clinic policy.</li><li>Once treatment has been carried out, no refund will be given.</li><li>Results vary between individuals.</li><li>Additional treatment may be required and may incur additional cost.</li><li>Review appointments do not automatically include free treatment.</li><li>Corrective treatment, if required, may be chargeable depending on the circumstances.</li></ul>
       <div class="f"><label class="q">Patient initials <span class="req">*</span></label><input type="text" name="Payment initials" required style="max-width:140px"></div>
@@ -376,13 +916,13 @@ info.lushlips@gmail.com
 
     <!-- RIGHT TO DISCONTINUE -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">17</span><h2 class="sec-t">Right to discontinue treatment</h2></div>
+      <div class="sec-h"><span class="sec-n">31</span><h2 class="sec-t">Right to discontinue treatment</h2></div>
       <p>I understand that I have the right to discontinue or decline treatment at any time before the procedure begins. I understand that the practitioner also has the right to refuse or stop treatment if they feel it is unsafe, unsuitable, medically inappropriate, or not in my best interest.</p>
     </div>
 
     <!-- AFTERCARE -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">18</span><h2 class="sec-t">Aftercare</h2></div>
+      <div class="sec-h"><span class="sec-n">32</span><h2 class="sec-t">Aftercare</h2></div>
       <p>I understand that following aftercare instructions is essential to reduce risks and support healing. I understand that failure to follow aftercare may increase the risk of infection, prolonged swelling, bruising, delayed healing, pigmentation changes, poor results, scarring and complications. I agree to follow all aftercare instructions provided by Layali Clinic.</p>
 
       <h3>Aftercare day by day — immediately after the procedure</h3>
@@ -404,7 +944,7 @@ info.lushlips@gmail.com
 
     <!-- MANAGING SIDE EFFECTS -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">19</span><h2 class="sec-t">Managing side effects at home</h2></div>
+      <div class="sec-h"><span class="sec-n">33</span><h2 class="sec-t">Managing side effects at home</h2></div>
       <h3>Swelling</h3>
       <p>Swelling is common and expected. To help manage swelling at home: sleep with your head elevated if face or neck has been treated, drink plenty of water, avoid alcohol for at least 48–72 hours, avoid high-salt foods, avoid intense exercise for the first week, use a clean cool compress for 10 minutes at a time if advised, do not apply ice directly to the skin, and do not over-ice the area. Swelling may be worse in the morning and improve during the day.</p>
       <h3>Bruising</h3>
@@ -425,7 +965,7 @@ info.lushlips@gmail.com
 
     <!-- WHEN TO CONTACT URGENTLY -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">20</span><h2 class="sec-t">When to contact Layali Clinic urgently</h2></div>
+      <div class="sec-h"><span class="sec-n">34</span><h2 class="sec-t">When to contact Layali Clinic urgently</h2></div>
       <div class="notice warn">You must contact Layali Clinic immediately if you experience:
         <ul style="margin:10px 0 0;padding-left:18px"><li>Increasing pain</li><li>Severe pain</li><li>Worsening swelling</li><li>Sudden swelling</li><li>Increasing redness</li><li>Heat spreading from the area</li><li>Pus or discharge</li><li>Fever</li><li>Feeling unwell</li><li>Skin blistering</li><li>Skin turning white, grey, purple or black</li><li>Severe asymmetry</li><li>Loss of movement</li><li>Worsening numbness</li><li>Any symptom that concerns you</li></ul>
         <div style="margin-top:10px">If you feel seriously unwell or believe you require urgent medical attention, seek urgent medical care or call emergency services. <b>Layali Clinic:</b> 07787&nbsp;708200.</div>
@@ -434,14 +974,14 @@ info.lushlips@gmail.com
 
     <!-- PATIENT RESPONSIBILITIES -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">21</span><h2 class="sec-t">Patient responsibilities</h2></div>
+      <div class="sec-h"><span class="sec-n">35</span><h2 class="sec-t">Patient responsibilities</h2></div>
       <p>I understand that I am responsible for:</p>
       <ul><li>Providing accurate medical history.</li><li>Informing the practitioner of medication, allergies and medical changes.</li><li>Following pre-care and aftercare instructions.</li><li>Attending review appointments.</li><li>Contacting the clinic promptly if concerns arise.</li><li>Not withholding information that may affect treatment safety.</li></ul>
     </div>
 
     <!-- FINAL CONSENT -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">22</span><h2 class="sec-t">Final consent statement</h2></div>
+      <div class="sec-h"><span class="sec-n">36</span><h2 class="sec-t">Final consent statement</h2></div>
       <p>At this moment, I voluntarily consent to undergo Endolaser treatment.</p>
       <p>I understand that Endolaser is a minimally invasive procedure involving the use of a laser fibre beneath the skin to stimulate collagen, tighten tissue and, where appropriate, reduce localised fat.</p>
       <p>I understand that results vary and no guarantee has been made regarding the final outcome.</p>
@@ -468,7 +1008,7 @@ info.lushlips@gmail.com
 
     <!-- PRACTITIONER DECLARATION -->
     <div class="card prose">
-      <div class="sec-h"><span class="sec-n">23</span><h2 class="sec-t">Practitioner declaration</h2></div>
+      <div class="sec-h"><span class="sec-n">37</span><h2 class="sec-t">Practitioner declaration</h2></div>
       <p>I confirm that I have discussed the Endolaser procedure with the patient, including the nature of the treatment, expected benefits, possible risks, complications, alternatives, aftercare and expected recovery. I confirm that the patient has had the opportunity to ask questions and that these have been answered to the best of my ability.</p>
       <div class="row">
         <div class="f"><label class="q">Practitioner name</label><input type="text" name="Practitioner name" value="Husna Panjabi"></div>
