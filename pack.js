@@ -190,13 +190,21 @@ document.addEventListener('DOMContentLoaded', () => {
       aftercareUrl: (function(){var u=location.href.split('#')[0].split('?')[0].split('/');u[u.length-1]='6-aftercare-guide.html';return u.join('/');})()
     };
 
-    // Submit as a standard top-level POST — works in EVERY browser, including the
-    // in-app browsers inside Instagram, WhatsApp & Facebook. The Apps Script saves
-    // the submission and returns a branded "Thank you" page.
-    const f = document.createElement('form');
-    f.action = SCRIPT_URL; f.method = 'POST'; f.acceptCharset = 'utf-8'; f.style.display = 'none';
-    const ta = document.createElement('textarea'); ta.name = 'payload'; ta.value = JSON.stringify(payload);
-    f.appendChild(ta); document.body.appendChild(f);
-    f.submit();
+    // Send in the BACKGROUND so the client stays on our own branded page and
+    // never sees the Google script page. no-cors lets Apps Script receive the POST.
+    var _done = false;
+    function _thanks() {
+      if (_done) return; _done = true;
+      var host = form.closest('main') || form.parentElement || document.body;
+      host.innerHTML = '<div style="max-width:560px;margin:60px auto;text-align:center;padding:24px;font-family:Georgia,serif">' +
+        '<div style="font-size:38px;color:#6B2436;margin-bottom:16px">Thank you</div>' +
+        '<p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.8;color:#4a3d38;max-width:460px;margin:0 auto">' +
+        'Your consent form has been received. A copy has been emailed to you, with your pre-care and aftercare guides, and to the clinic.</p>' +
+        '<p style="font-family:Arial,Helvetica,sans-serif;margin-top:26px;letter-spacing:.22em;font-size:12px;color:#C7A46A">LAYALI CLINIC</p></div>';
+      try { window.scrollTo(0, 0); } catch (e) {}
+    }
+    var _body = new FormData(); _body.append('payload', JSON.stringify(payload));
+    fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: _body }).then(_thanks).catch(_thanks);
+    setTimeout(_thanks, 8000);
   });
 });
