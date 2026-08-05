@@ -185,7 +185,9 @@ document.addEventListener('DOMContentLoaded', () => {
       fields: fields,
       pdfBase64: pdfBase64,
       pdfName: pdfName,
-      autoresponse: form.dataset.autoresponse || ''
+      autoresponse: form.dataset.autoresponse || '',
+      precareUrl: (function(){var u=location.href.split('#')[0].split('?')[0].split('/');u[u.length-1]='4-pre-care-guide.html';return u.join('/');})(),
+      aftercareUrl: (function(){var u=location.href.split('#')[0].split('?')[0].split('/');u[u.length-1]='6-aftercare-guide.html';return u.join('/');})()
     };
 
     // Submit as a standard top-level POST — works in EVERY browser, including the
